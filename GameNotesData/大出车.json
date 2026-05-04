@@ -1,0 +1,30 @@
+{
+    "initial_position": "r2akaer1/9/1c2e1hc1/4p1p1p/php6/9/P1P1P1P1P/H1C1C1H2/R8/2EAKAER1 b - - 0 1",
+    "title": "大出车",
+    "annotations": [
+        {
+            "uci": "a6a5",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "a4a5",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "a10a5",
+                            "note": "由于车一步就走到了对方的阵营，车的走动幅度大，所以叫做 “大出车”",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "当常见的出车路线已经被占，我们可以考虑从边路，以兑兵的方式出车。\n\n当双方兑兵之后，黑车就直接走动到对方阵营，可以直接进攻。"
+}

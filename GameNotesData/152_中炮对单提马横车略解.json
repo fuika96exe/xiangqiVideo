@@ -1,0 +1,220 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "1.5.2 中炮对单提马横车略解",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10i8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10i9",
+                                                    "note": "横车比直车反弹性更强，以下线路是车9=4。",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "c4c5",
+                                                            "note": "双用兵，且伏凶狠而隐蔽的战术。",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i9d9",
+                                                                    "note": "",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "b1c3",
+                                                                            "note": "正常出子",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "d9d6",
+                                                                                    "note": "单提马横车的常见手段，以后卒9+1再马9+8打车",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "h1h5",
+                                                                                            "note": "预防黑卒9+1再马9+8，必要时可车2=6兑车逃逸。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "i7i6",
+                                                                                                    "note": "贯彻计划，以后马9+8打车。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "h5d5",
+                                                                                                            "note": "先手逃车，黑必须作出回应。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "d6f6",
+                                                                                                                    "note": "？如车4+1，马7+6，黑四步车兑掉三步车亏步数自然不肯。但同样平车避兑这个车位被利用，应车4=8",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "d5d9",
+                                                                                                                            "note": "好棋，让出下手马7+6瞪车；黑车将来势必再让一步亏损步数，红大优。\n\n同样思路为什么不车6+2？因为点象眼后黑无法象3+5布成理想阵形（以中象为根八路炮保三路马）。\n\n又为什么不车退车（如车6-3）？因为如车6-3，以后马7+6时黑可车6=4拉着无根车马。一般车马的结构宜“车前马后”，“马前车后”多为愚形。",
+                                                                                                                            "moves": [],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                },
+                                                                {
+                                                                    "uci": "h8f8",
+                                                                    "note": "老式下法，为中老年棋手钟爱。黑炮摆脱红二路车牵制后可从容象3+5补象。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "b3c3",
+                                                                            "note": "最佳下法，下手要兵7+1强行渡兵，黑不敢卒3+1，炮7+5吃马。",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "c10e8",
+                                                                                    "note": "防兵7+1。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "h1h8",
+                                                                                            "note": "飞象后单子炮被拆士角炮失根，进车是平七路炮后的连续手段。一般这种进车捉炮有帮忙之嫌，但这里由于黑有横车是最佳下法。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "d10e9",
+                                                                                                    "note": "黑被迫“横车上士”，九路车被士挡住了无法车9=4，位置极差。“横车上士”自相矛盾，是愚形。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "c3c7",
+                                                                                                            "note": "吃卒兼腾出马8+7正马发挥七路兵作用，是最佳下法。如马8+9？七路兵与边马无关联矛盾，效率降低。\n\n至此黑双马不活而且九路车出路不明，红优。",
+                                                                                                            "moves": [],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                },
+                                                                {
+                                                                    "uci": "i7i6",
+                                                                    "note": "？大子缓慢还是次要，更致命的是不察红精妙战术。\n\n现在黑八路炮被红二路车牵制，三路马既要肩负保中卒的任务又要为二路炮作炮台形成“单子炮”保八路炮。为什么这里会有战术？当子力被牵制或一子身兼多重任务（overloading）时容易出现战术，所以两者都当避免。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "c5c6",
+                                                                            "note": "好棋，击中要害。红方为什么要弃兵？不妨先自己思索，下回合有解释。",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "c7c6",
+                                                                                    "note": "只能先吃掉再说，否则再兵7+1欺马，黑无法忍受。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "b3c3",
+                                                                                            "note": "红送兵的意图是让黑三路线变薄红炮能直接打马。至此黑动马则丢炮，不动马则打马。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "i9c9",
+                                                                                                    "note": "煞费苦心，但阵形弱点太多。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "e3e7",
+                                                                                                            "note": "巧得空头炮，黑不敢马3+5，炮7+6打车。至此红大优。",
+                                                                                                            "moves": [],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "知识点：\n车前马后，马前车后是愚形\n横车上士是愚形\n当子力被牵制或一子身兼多重任务（overloading）时容易出现战术\n"
+}

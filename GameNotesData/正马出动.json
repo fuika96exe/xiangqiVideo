@@ -1,0 +1,30 @@
+{
+    "initial_position": "rheakae2/3r5/1c2c1h2/p1p1p1p1p/9/6P2/P1P1P3P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "正马出动",
+    "annotations": [
+        {
+            "uci": "b1c3",
+            "note": "现在中兵有两个正马保护",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "c4c5",
+                            "note": "红方走了两个正马，使得当其中一匹马发动攻击时，另一匹马仍能保护中兵。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "正马指马向中心走，既巩固中兵防守，又保持另一正马的进攻机动性，形成攻守兼备的弹性结构。"
+}

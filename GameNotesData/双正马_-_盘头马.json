@@ -1,0 +1,30 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3hc1/p3p2Rp/2p3p2/9/P1P1P1P1P/1CH1C1H2/9/R1EAKAE2 w - - 0 1",
+    "title": "双正马 - 盘头马",
+    "annotations": [
+        {
+            "uci": "e4e5",
+            "note": "红兵前进，配合双马向中路盘旋进攻，同时配合炮的位置，对黑方中路形成攻击压力。",
+            "moves": [
+                {
+                    "uci": "d10e9",
+                    "note": "黑方增加中路的防守",
+                    "moves": [
+                        {
+                            "uci": "c3e4",
+                            "note": "红马可以通过走到中路，配合中炮进行进攻。接下来，红方可以考虑走中兵，或者前进三兵或者七兵，是的红马前进到良好的进攻位置。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "红方走了双正马之后，除了常见的挺兵活马之外，红方可以选择从中路进攻"
+}

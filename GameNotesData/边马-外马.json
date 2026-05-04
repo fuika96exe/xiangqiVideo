@@ -1,0 +1,53 @@
+{
+    "initial_position": "r1e1kae2/4a4/1ch4ch/p1p1p1p1p/5r3/2P6/P3P1P1P/1CH1C1H2/9/R1EAKAER1 b - - 0 1",
+    "title": "边马-外马",
+    "annotations": [
+        {
+            "uci": "i7i6",
+            "note": "黑方挺卒之后，下一步出动马的同时，黑炮也会攻击红车",
+            "moves": [
+                {
+                    "uci": "b3a3",
+                    "note": "红方忽视了黑马的出动，对红车构成威胁，迫使其退回原位防守。",
+                    "moves": [
+                        {
+                            "uci": "i8h6",
+                            "note": "黑炮攻击红车红车被迫退回原位，导致红方子力出动缓慢，中局难以占据主动。这是边马常见的进攻方式，必须提高警觉，提前预防。",
+                            "moves": [
+                                {
+                                    "uci": "h1i1",
+                                    "note": "",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "h1h7",
+                    "note": "红车避免黑马前进，与黑炮一起攻击红车",
+                    "moves": [
+                        {
+                            "uci": "b8a8",
+                            "note": "",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "边马的典型进攻方式，是通过挺进边卒，为边马打开通路，从而发起进攻。"
+}

@@ -1,0 +1,30 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3hc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "挺兵活馬",
+    "annotations": [
+        {
+            "uci": "c4c5",
+            "note": "红方提前走兵，是为了给左马让路。这样一来，也防止了黑方的卒向前走，让黑马不便于出动。",
+            "moves": [
+                {
+                    "uci": "g7g6",
+                    "note": "黑方右侧的马受到限制时，通常会活通左侧的马，为其创造出反击的机会。",
+                    "moves": [
+                        {
+                            "uci": "b1c3",
+                            "note": "红方上一步提前挺兵，现在红马可以继续向前进攻。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "兵往前走，既能给自己的马让路，也能防止对方的卒向前走，限制对方马的发展。"
+}

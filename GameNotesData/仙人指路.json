@@ -1,0 +1,38 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "仙人指路",
+    "annotations": [
+        {
+            "uci": "c4c5",
+            "note": "挺马前兵活马保留炮平中炮（至刚）及飞相（至柔）等选择，是最灵活多变的第一手棋，可自由转换成诸般其他布局。挺兵投石问路静观敌变，故冠名“仙人指路”。",
+            "moves": [
+                {
+                    "uci": "b8c8",
+                    "note": "应对仙人指路的应法不胜枚举，但最好的两种应法是包2=3“卒底炮”和卒7+1“对兵局”。\n而这两种中包2=3最具针对性和强制性，适合初学者学习。",
+                    "moves": [
+                        {
+                            "uci": "h3e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h8e8",
+                                    "note": "雙方還架中炮對攻",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "象棋起首第一步可行的下法有很多，常见下法有六种，此棋譜展示的是仙人指路開局"
+}

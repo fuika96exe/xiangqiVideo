@@ -1,0 +1,1302 @@
+[
+  {
+    "type": "move",
+    "uci": "b1c3",
+    "board": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "prevBoard": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "isMainLine": true,
+    "depth": 0,
+    "title": "Proper Horse Development",
+    "subtitles": [
+      {
+        "text": "The central pawn is protected by two properly developed horses.",
+        "audioFile": "/audio/audio_0.mp3",
+        "durationInFrames": 135
+      }
+    ],
+    "audioStartFrame": 15,
+    "durationInFrames": 165
+  },
+  {
+    "type": "move",
+    "uci": "b10c8",
+    "board": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "prevBoard": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "isMainLine": true,
+    "depth": 0,
+    "title": "Proper Horse Development",
+    "subtitles": [],
+    "audioStartFrame": 15,
+    "durationInFrames": 45
+  },
+  {
+    "type": "move",
+    "uci": "c4c5",
+    "board": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "prevBoard": [
+      [
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "king",
+          "color": "black"
+        },
+        {
+          "type": "advisor",
+          "color": "black"
+        },
+        {
+          "type": "elephant",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "type": "chariot",
+          "color": "black"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "black"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "black"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        },
+        null,
+        null,
+        null,
+        {
+          "type": "soldier",
+          "color": "red"
+        }
+      ],
+      [
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "cannon",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "horse",
+          "color": "red"
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null,
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "king",
+          "color": "red"
+        },
+        {
+          "type": "advisor",
+          "color": "red"
+        },
+        {
+          "type": "elephant",
+          "color": "red"
+        },
+        {
+          "type": "chariot",
+          "color": "red"
+        },
+        null
+      ]
+    ],
+    "isMainLine": true,
+    "depth": 0,
+    "title": "Proper Horse Development",
+    "subtitles": [
+      {
+        "text": "Red has developed both horses",
+        "audioFile": "/audio/audio_1.mp3",
+        "durationInFrames": 87
+      },
+      {
+        "text": "ensuring that when one initiates an attack",
+        "audioFile": "/audio/audio_2.mp3",
+        "durationInFrames": 102
+      },
+      {
+        "text": "the other can still defend the central pawn.",
+        "audioFile": "/audio/audio_3.mp3",
+        "durationInFrames": 100
+      }
+    ],
+    "audioStartFrame": 15,
+    "durationInFrames": 319
+  }
+]

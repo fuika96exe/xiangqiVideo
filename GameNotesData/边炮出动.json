@@ -1,0 +1,38 @@
+{
+    "initial_position": "r1eakaehr/9/2h1c2c1/p1p1p1p1p/9/2P6/P3P1P1P/1C4HC1/9/RHEAKAE1R w - - 0 1",
+    "title": "边炮出动",
+    "annotations": [
+        {
+            "uci": "h3i3",
+            "note": "平炮让路，红车就可以出动，攻击黑方出子缓慢的左翼",
+            "moves": [
+                {
+                    "uci": "h10g8",
+                    "note": "黑方平衡左翼的发展速度",
+                    "moves": [
+                        {
+                            "uci": "i1h1",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "i10h10",
+                                    "note": "红方利用走动边炮的方式，快速出动自己有翼的车，进攻黑方的弱点",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "边炮开局，意在快速出车，但较为少见。，其战略意图鲜明：\n1.为车让路形成直车快出 \n2.诱导黑方子力失衡。"
+}

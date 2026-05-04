@@ -1,0 +1,30 @@
+{
+    "initial_position": "rheakae2/3r5/1c2c1h2/p1p1p1p1p/9/6P2/P1P1P3P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "Proper Horse Development",
+    "annotations": [
+        {
+            "uci": "b1c3",
+            "note": "The central pawn is protected by two properly developed horses.",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "c4c5",
+                            "note": "Red has developed both horses, ensuring that when one initiates an attack, the other can still defend the central pawn.",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial_position_annotation": "Proper horse refers to developing the horse toward the center, strengthening the central pawn's defense while maintaining the other horse's attacking mobility, forming a flexible structure that balances offense and defense."
+}

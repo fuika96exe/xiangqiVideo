@@ -1,0 +1,54 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "過宮炮",
+    "annotations": [
+        {
+            "uci": "h3d3",
+            "note": "平炮越过中路到九宫内士角称作“过宫炮”。其意在集中兵力攻击黑右翼，同时有平炮亮车之意，以后的理想棋形是兵7+1，马8+7，马7+6布成“马后炮”结构。",
+            "moves": [
+                {
+                    "uci": "h8e8",
+                    "note": "对付过宫炮的应法不可胜数，我们只介绍包8=5左中炮这路最有攻击性且线路简单的下法。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "另一流行下法是相3+5准备士4+5出贴身车的下法。",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10i9",
+                                                    "note": "",
+                                                    "moves": [],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "象棋起首第一步可行的下法有很多，常见下法有六种，此棋谱展示的是过宫炮开局"
+}

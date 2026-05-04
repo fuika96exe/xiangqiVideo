@@ -1,0 +1,30 @@
+{
+    "initial_position": "1reakae1r/9/2h1c1c1h/p1p1p1p1p/9/6P1P/P1P1P4/1CH3HC1/9/1REAKAE1R w - - 0 1",
+    "title": "外马封车",
+    "annotations": [
+        {
+            "uci": "g3h5",
+            "note": "红方马炮封锁了黑方9路车出动直车的线路",
+            "moves": [
+                {
+                    "uci": "i10i9",
+                    "note": "黑9路车只能横车出动，出动速度较为缓慢",
+                    "moves": [
+                        {
+                            "uci": "g1e3",
+                            "note": "在这个例子中，红方利用马炮来减缓黑车的出动速度",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "黑方意图通过车9平8出动黑车，红方可运用马炮配合，对其加以封锁。"
+}

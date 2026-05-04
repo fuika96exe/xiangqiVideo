@@ -1,0 +1,62 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "飛相局",
+    "annotations": [
+        {
+            "uci": "g1e3",
+            "note": "飞相使双相相连加固防守，但以后不太可能再炮2=5架中炮，是最稳健/柔性的第一手棋，往往为局面型/稳健型棋手擅长。《孙子兵法》中“先为不可胜，以待敌之可胜”即是飞相局的指导思想。",
+            "moves": [
+                {
+                    "uci": "h8e8",
+                    "note": "对付飞相局的应法多如繁星，我们这里只介绍包8=5左中炮这一路最有攻击性且线路简单的下法。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10h10",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "b1c3",
+                                                            "note": "红方防御坚实。阵营稳固。",
+                                                            "moves": [],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "象棋起首第一步可行的下法有很多，常见下法有六种，此棋譜展示的是飛相開局"
+}

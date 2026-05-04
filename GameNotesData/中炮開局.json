@@ -1,0 +1,155 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "中炮開局",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "这步“中炮”（亦称“当头炮”，也许取”当头一棒“之意）是最有攻击性也是最有强制性的第一手棋，为攻击型棋手偏爱。\n\n红炮立中后威胁下一步炮5+4吃中卒形成“空头炮”的优势棋形（因黑不能补士象，红可配合车进行抽将）；象棋的中路要比边线重要得多，平炮中路可直接针对黑方同在中路的将。\n\n红平中炮后黑有屏风马，反宫马，顺炮，列炮四大应法，此外还有单提马，右三步虎，鸳鸯炮，龟背炮等冷门下法，我们将阐述应法及单提马五种下法。若按客观优劣排名是 屏风马 > 反宫马 > 顺炮 = 列炮 > 单提马。",
+            "moves": [
+                {
+                    "uci": "h10g8",
+                    "note": "马保中卒兼出动大子。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "i10h10",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "b10c8",
+                                                    "note": "黑双正马状如屏风马，故得名“屏风马”。此處雙方結出中炮對屏風馬的開局陣營",
+                                                    "moves": [],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h8f8",
+                                    "note": "平炮士角延缓红马8+7跳正马的速度，称作“反宫马”（或“反攻马”，“夹炮屏风”）。",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "h10g8",
+                                                    "note": "形成中炮直车对反宫马的基本阵势",
+                                                    "moves": [],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "h8e8",
+                    "note": "黑平与红炮同一方向的炮到中央，称作“顺炮”或“顺手炮”。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "以下变化会在之后课程展示",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "b8e8",
+                    "note": "平相反方向的中炮形成对称棋形，是“列炮”（“列手炮”）的雏形。列炮又分“大列炮”，“小列炮”，“后补列炮”三个主流分支。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10h10",
+                                                    "note": "形成小列炮的基本阵势。",
+                                                    "moves": [],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "象棋起首第一步可行的下法有很多，常见下法有六种，此棋譜展示的是中炮開局"
+}

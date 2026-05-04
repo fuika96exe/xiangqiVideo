@@ -1,0 +1,40 @@
+{
+    "initial_position": "r1eakaer1/9/1ch1c1h2/p1p1p1p1p/9/9/P1P1P1P1P/1C1CE1H2/4A4/RHEAK3R w - - 0 1",
+    "title": "贴身车",
+    "annotations": [
+        {
+            "uci": "i1f1",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "g7g6",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "f1f7",
+                            "note": "此外，红方也可以考虑发展左侧子力，使得左右发展均衡",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [
+                {
+                    "c1": "i",
+                    "c2": "f",
+                    "r1": 1,
+                    "r2": 1,
+                    "type": {
+                        "color": "#327EE2"
+                    }
+                }
+            ],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "贴身车指的是将车移动到将帅旁边，一步就能走到肋道。它的作用类似于肋道车，既可以前进至卒林线进攻马，也可以进至下二线进攻士相"
+}

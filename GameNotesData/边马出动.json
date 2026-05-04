@@ -1,0 +1,40 @@
+{
+    "initial_position": "r1eakae1r/9/2h1c1hc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "边马出动",
+    "annotations": [
+        {
+            "uci": "b1a3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "g7g6",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "a4a5",
+                            "note": "挺兵活通边马的去路",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [
+                {
+                    "c1": "b",
+                    "c2": "a",
+                    "r1": 1,
+                    "r2": 3,
+                    "type": {
+                        "color": "#327EE2"
+                    }
+                }
+            ],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "边马是指马走到边线，并用相来保护。这种走法使得双马都受到保护，但缺点是中兵只剩下一个马保护，中路防守会变弱。"
+}

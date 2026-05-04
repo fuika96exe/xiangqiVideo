@@ -1,0 +1,524 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "后手应对仙人指路",
+    "annotations": [
+        {
+            "uci": "c4c5",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "b8c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h3e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h8e8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "最佳下法。",
+                                            "moves": [
+                                                {
+                                                    "uci": "c7c6",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "i1h1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "c6c5",
+                                                                    "note": "",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "b1a3",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "c8c9",
+                                                                                    "note": "防车2+8，兼腾出马2+3。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "b3b9",
+                                                                                            "note": "最佳下法，防马2+3，下手车2+4；是红确立优势的关键棋。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "a10a8",
+                                                                                                    "note": "活车，下手车1=2捉炮，且以后可车1=3保卒。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "a1b1",
+                                                                                                            "note": "双用车防车1=2，下手车2+4。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "a8c8",
+                                                                                                                    "note": "最佳下法，预防红车2+4；下手马8+7跳马出动左翼大子。",
+                                                                                                                    "moves": [],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "h1h5",
+                                                                                            "note": "？迎合黑方意图。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "b10c8",
+                                                                                                    "note": "至此均势。 ",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "b3c3",
+                                                                                                            "note": "",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "a10a8",
+                                                                                                                    "note": "",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "a1b1",
+                                                                                                                            "note": "",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "h10g8",
+                                                                                                                                    "note": "",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "b1b9",
+                                                                                                                                            "note": "",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "i10i9",
+                                                                                                                                                    "note": "",
+                                                                                                                                                    "moves": [],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "b3e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h8e8",
+                                    "note": "最佳下法。以下红有马8+7及马2+3两种流行下法。",
+                                    "moves": [
+                                        {
+                                            "uci": "b1c3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "h10g8",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "h1i3",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i10h10",
+                                                                    "note": "",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "i1h1",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "b10a8",
+                                                                                    "note": "",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "a1b1",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "c7c6",
+                                                                                                    "note": "",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "c5c6",
+                                                                                                            "note": "",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "h10h6",
+                                                                                                                    "note": "均势中黑易走。",
+                                                                                                                    "moves": [],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "h3h7",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "g7g6",
+                                                                                                    "note": "",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "a1b1",
+                                                                                                            "note": "",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "a7a6",
+                                                                                                                    "note": "均势。",
+                                                                                                                    "moves": [],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        },
+                                                        {
+                                                            "uci": "h1g3",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i10h10",
+                                                                    "note": "",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "i1h1",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "h10h5",
+                                                                                    "note": "均势。",
+                                                                                    "moves": [],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        },
+                                                                        {
+                                                                            "uci": "c3d5",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "h10h6",
+                                                                                    "note": "黑稍优。",
+                                                                                    "moves": [],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "g1e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10a8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "b1c3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "a10b10",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "a1b1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "h8e8",
+                                                                    "note": "",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        },
+                                                        {
+                                                            "uci": "c3d5",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "h10g8",
+                                                                    "note": "",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "c1e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10a8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "b1c3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "a10b10",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "a1b1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "h8e8",
+                                                                    "note": "",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "c7c6",
+                                    "note": "",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "b1c3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "c7c6",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "c3d5",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "c6c5",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "d5e7",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "g10e8",
+                                                                    "note": "",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "为了方便初学者尽快掌握开局，我们站在后手立场分别推荐六大流行布局的一种应法。我们选择的布局不一定是客观上最好的，但希望能尽量做到 1）简单易懂 2）有攻击性/强制性，对方应着较少，不必过于依赖记忆。我们也不会推演得太深或细解每步用意，但挑选的每一路下法都是经过深思熟虑和软件核对的，可以在实战中放心使用及往下延伸。\n\n此棋谱介绍后手应对仙人指路的推荐着法"
+}

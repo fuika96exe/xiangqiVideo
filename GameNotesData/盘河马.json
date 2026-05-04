@@ -1,0 +1,58 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3hc1/p1p1p2Rp/6p2/2P6/P3P1P1P/1C2C1H2/9/RHEAKAE2 b - - 0 1",
+    "title": "盘河马",
+    "annotations": [
+        {
+            "uci": "g8f6",
+            "note": "黑马走到河口，占据了很多攻击点。现在它还不能攻击红车，因为黑卒挡在前面。但黑方可以下一步走卒，让黑马形成威胁",
+            "moves": [
+                {
+                    "uci": "b3d3",
+                    "note": "如果红方没有注意，那么黑现在可以向前走动黑卒",
+                    "moves": [
+                        {
+                            "uci": "g6g5",
+                            "note": "下一步黑卒可以吃兵，黑马则对红车形成威胁，红方面临双重压力，难以兼顾。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [
+                        {
+                            "c1": "f",
+                            "c2": "d",
+                            "r1": 6,
+                            "r2": 5,
+                            "type": {
+                                "color": "#327EE2"
+                            }
+                        },
+                        {
+                            "c1": "f",
+                            "c2": "e",
+                            "r1": 6,
+                            "r2": 4,
+                            "type": {
+                                "color": "#327EE2"
+                            }
+                        },
+                        {
+                            "c1": "f",
+                            "c2": "g",
+                            "r1": 6,
+                            "r2": 4,
+                            "type": {
+                                "color": "#327EE2"
+                            }
+                        }
+                    ],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": ""
+}

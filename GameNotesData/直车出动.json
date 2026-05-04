@@ -1,0 +1,30 @@
+{
+    "initial_position": "rheakae1r/9/1c2c1h2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/9/RHEAKAE1R w - - 0 1",
+    "title": "直车出动",
+    "annotations": [
+        {
+            "uci": "i1h1",
+            "note": "红右车在直线的走动空间多，称为直车。它可以根据局势，选择进攻或防守。",
+            "moves": [
+                {
+                    "uci": "i10i9",
+                    "note": "当一方选择了直车，另一方常见的出动方式，则为横车。",
+                    "moves": [
+                        {
+                            "uci": "b1c3",
+                            "note": "红方平衡左右子力的发展，巩固进攻与防守",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "在象棋中，车是非常强的棋子。开局怎么出车，会影响整盘棋的布局和进攻节奏。本节我们来学习几种常见的出车方式。"
+}

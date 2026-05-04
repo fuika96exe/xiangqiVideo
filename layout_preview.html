@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>视频排版预览 (16:9比例)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* 视频容器，严格 16:9 */
+        .video-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F4ECE1;
+            display: flex;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            position: relative;
+            box-sizing: border-box;
+            padding: 40px 50px;
+            gap: 50px; /* 增加左右两大区块的间距 */
+        }
+        
+        /* 左半部分 (固定宽度) */
+        .left-panel {
+            flex: 0 0 540px; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4A3C31;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        .chessboard-placeholder {
+            width: 540px;
+            height: 580px; /* 棋盘高度 */
+            background-color: #E2C792;
+            border: 3px solid #8B5A2B;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+
+        .board-label {
+            color: #8B5A2B;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 右半部分 */
+        .right-panel {
+            flex: 1; /* 自动撑满剩余所有的宽度，因此被拉宽了 */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 60px; /* (40px标题高度 + 20px间距 = 60px)，使得右侧卡片顶部与棋盘顶部严格对齐 */
+            height: 580px; /* 右侧总高度严格等于棋盘高度(580px)，确保底部与棋盘底部严格对齐 */
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            box-sizing: border-box;
+        }
+
+        /* 缩小后的 Move 卡片 */
+        .move-card {
+            background-color: #FFFFFF;
+            flex: 0 0 auto; /* 不会自动拉伸拉长 */
+            padding: 20px 30px; /* 减小内边距 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-label {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #A0938A;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 8px; /* 减小标题与内容的间距 */
+        }
+
+        .move-text {
+            font-size: 42px; /* 减小字体大小 */
+            font-weight: 800;
+            color: #2D241E;
+            letter-spacing: 2px;
+        }
+
+        /* 拉高后的 Commentary 卡片 */
+        .commentary-card {
+            background-color: #3D312A;
+            flex: 1; /* flex: 1 会自动占满 580px 高度里所有剩下的空间 */
+            color: #FFFFFF;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .commentary-card .card-label {
+            color: #B2A296;
+            margin-bottom: 24px;
+        }
+
+        /* 针对评论区设计的精美排版 */
+        .knowledge-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 行间距增大，提升呼吸感 */
+        }
+
+        .knowledge-list li {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #F4ECE1;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        /* 自定义精美小圆点 */
+        .knowledge-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #D4A373; /* 使用强调色作为列表圆点 */
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        /* 高亮文本 */
+        .highlight {
+            color: #E6B981;
+            font-weight: 600;
+            padding-right: 4px;
+            border-bottom: 1px solid rgba(230, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- 左侧区域：标题与棋盘 -->
+        <div class="left-panel">
+            <div class="chapter-title">1.2.3 后补列炮略解</div>
+            <div class="chessboard-placeholder">
+                <div class="board-label">(棋盘显示区)</div>
+            </div>
+        </div>
+
+        <!-- 右侧区域：招法与解说卡片 -->
+        <div class="right-panel">
+            <!-- 缩小的 Move 卡片 -->
+            <div class="card move-card">
+                <div class="card-label">MOVE</div>
+                <div class="move-text">炮八平五</div>
+            </div>
+            
+            <!-- 补满剩余高度、优化排版的 Commentary 卡片 -->
+            <div class="card commentary-card">
+                <div class="card-label">COMMENTARY</div>
+                <ul class="knowledge-list">
+                    <li><span class="highlight">知识点: 有针对性 + 预防棋</span> (prophylaxis)。</li>
+                    <li>双用兵先锋马破过河炮封车战术，至上原则。</li>
+                    <li>田字兵是愚形，孤军深入（特别是马）容易被利用，甚至捉死。</li>
+                    <li>过河炮互挺三兵的补象方向，遵循<span class="highlight">多用途原则</span>。</li>
+                    <li>车无根与对方车炮同线时，时刻注意对方平炮闪击。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

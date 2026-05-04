@@ -1,0 +1,45 @@
+{
+    "initial_position": "r1eakae1r/9/1ch1c1h2/p1p1p3p/6p2/2P6/P3P1P1P/1CH1C1H2/9/R1EAKAER1 b - - 0 1",
+    "title": "过河炮压马",
+    "annotations": [
+        {
+            "uci": "b8b4",
+            "note": "黑炮前进后，除了可以平炮压制红方左侧的马外，还可以视情况吃兵，以压制红方右侧的马。",
+            "moves": [
+                {
+                    "uci": "b3a3",
+                    "note": "红方没有及时出动左马，造成它被黑炮压制",
+                    "moves": [
+                        {
+                            "uci": "b4c4",
+                            "note": "黑炮压制红马的出动之外，始终攻击着红底相",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "c3b5",
+                    "note": "红方防止左侧的马被黑炮压制",
+                    "moves": [
+                        {
+                            "uci": "b4g4",
+                            "note": "黑炮吃兵，且压制红方右侧的马",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": ""
+}

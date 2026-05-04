@@ -1,0 +1,38 @@
+{
+    "initial_position": "r1eakaer1/9/2h1c1hc1/p1p1p1p1p/9/9/P1P1P1P1P/1CH1C1H2/9/R1EAKAER1 w - - 0 1",
+    "title": "直车-过河车",
+    "annotations": [
+        {
+            "uci": "h1h7",
+            "note": "红车可以根据情况，吃卒并压制黑马",
+            "moves": [
+                {
+                    "uci": "h8i8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h7g7",
+                            "note": "吃卒、又攻击黑马，这就是过河车的作用。",
+                            "moves": [
+                                {
+                                    "uci": "h10h8",
+                                    "note": "",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "常见的进攻手段是将车移动到兵卒所在的位置，既可以吃掉兵卒，又能压制对方马的走动。这样的车在过河后占据兵卒位置，被称为过河车。"
+}

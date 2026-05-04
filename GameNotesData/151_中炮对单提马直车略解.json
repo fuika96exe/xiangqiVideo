@@ -1,0 +1,142 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "1.5.1 中炮对单提马直车略解",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10i8",
+                                    "note": "一个正马一个边马的阵形称作“单提马”（亦称“七宝连树”），是个古老的布局。它的优点是子子生根不容易丢子，缺点是边马不如正马缺乏反弹力。尤其面对中炮时单提马由于只有一个马保护中卒容易吃亏，很多路变化发展下去都会少卒。\n\n客观来说单提马吃亏较多不如四大布局，在现今职业棋手的对局中单提马几乎绝迹，不列四大对抗中炮的布局之内。走单提马的人一般是中残局功力深厚但不愿在开局上花费大量精力解拆的老棋手。\n\n",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "直车优于横车。",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10h10",
+                                                    "note": "单提马分直车与横车两路变化，直车是早期出现较多的下法，杨官璘的名著《弈林新编》曾花了相当篇幅解拆。现代多改走车9+1横车，反弹力较强。",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "c4c5",
+                                                            "note": "双用兵。",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "c10e8",
+                                                                    "note": "？传统下法，大子迟缓。应包2=1快速出动右车更合理，但下单提马的人一般不精于布局，很少有人能走出平炮。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "b1c3",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "d10e9",
+                                                                                    "note": "以后可车1=4，也有它的想法。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "g4g5",
+                                                                                            "note": "顺利挺起两头蛇，红双马明显优于黑双马。以下争夺的要点是黑四路车是否能走出点棋获得补偿，如果不能将形成一边倒的劣势。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "a10d10",
+                                                                                                    "note": "",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "b3a3",
+                                                                                                            "note": "此时平边炮，恰到好处，是黑贴身车后的常规手段，可称为“贴身边炮”。同理当对方提横车后第一反应是平边炮出直车抓炮（“横车边炮”），两者的共同之处是黑不会再车4=2（或横车后车1=2）浪费一先保炮。红方如果第6回合不走兵3+1改走炮8=9则放活了黑车1=2出直车，局面透松。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "b8b4",
+                                                                                                                    "note": "主流下法，下手包2=3压马。同样应对红车9=8捉炮假如单纯包2=1效率不高，包2+4再包2=3压马对红较有威胁。",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "a1b1",
+                                                                                                                            "note": "",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "b4c4",
+                                                                                                                                    "note": "瞄着红七路底象让红八路车不能轻易抬起。《弈林新编》中另有记载车4+6的下法，更差。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "g3f5",
+                                                                                                                                            "note": "面对对方贴身车（或横车再平肋）跳先锋马是第一反应，可同时控制黑车4+4和车4+6两个落点；且下手马4+5吃卒，目的明确。\n\n这手是次佳着法，兵5+1最佳但线路不明难以理解。至此黑无有效防御手段，红优。",
+                                                                                                                                            "moves": [],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "知识点：\n单提马的优点与弊端\n单提马应对中炮吃亏\n单提马的两大主流\n贴身边炮，横车边炮\n贴身先锋，肋车先锋"
+}

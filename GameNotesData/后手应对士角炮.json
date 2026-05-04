@@ -1,0 +1,147 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "后手应对士角炮",
+    "annotations": [
+        {
+            "uci": "h3f3",
+            "note": "为了方便初学者尽快掌握开局，我们站在后手立场分别推荐六大流行布局的一种应法。我们选择的布局不一定是客观上最好的，但希望能尽量做到 1）简单易懂 2）有攻击性/强制性，对方应着较少，不必过于依赖记忆。我们也不会推演得太深或细解每步用意，但挑选的每一路下法都是经过深思熟虑和软件核对的，可以在实战中放心使用及往下延伸。\n\n此棋谱介绍后手应对士角炮的推荐着法",
+            "moves": [
+                {
+                    "uci": "b8e8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "b1c3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10c8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "h10i8",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "a1b1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "a10b10",
+                                                                    "note": "",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "i1h1",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "i10h10",
+                                                                                    "note": "均势。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "b3b7",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "c7c6",
+                                                                                                    "note": "",
+                                                                                                    "moves": [],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "b3b9",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "c7c6",
+                                                                                                    "note": "",
+                                                                                                    "moves": [],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "f3f8",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "b10b4",
+                                                                                                    "note": "",
+                                                                                                    "moves": [],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "c4c5",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "b10b6",
+                                                                                                    "note": "",
+                                                                                                    "moves": [],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "前面我们花了大量篇幅细说各种流行布局的关键思路及蕴含的棋理，亦简单介绍了散手棋。象棋的开局浩如烟海要大量时间钻研才能精通，我们只能选择较重要及有启发性的棋路阐述以盼收抛砖引玉之效。\n\n为了方便初学者尽快掌握开局我们站在后手立场分别推荐六大流行布局的一种应法。我们选择的布局不一定是客观上最好、职业棋手间最流行或最有反击力的，但希望能尽量做到 1）简单易懂 2）有攻击性/强制性对方应着较少不必过于依赖记忆。\n\n此外我们也不会推演得太深或细解每步用意，但挑选的每一路下法都是经过深思熟虑和软件核对的，可以在实战中放心使用及往下延伸。\n\n至于先手开局我们不会列举具体着法但强烈推荐中炮（炮2=5），因为初学者应先学攻杀及直线条、目的明确的棋。黑方如以屏风马这一绝对主流应对我们推荐从 1）中炮七兵过河车 2）中炮牛头滚 或 3）中炮横车盘头马这三路变化中挑选一路，有兴趣的读者可以自行查看相关书籍及教程。\n\n最后初学者不应花太多时间钻研复杂开局定式，掌握基本棋理及中局战术比死记硬背海量最佳下法要重要得多。"
+}

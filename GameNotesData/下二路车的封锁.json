@@ -1,0 +1,30 @@
+{
+    "initial_position": "rheakaehr/9/1c2c4/p3p3p/2p3p2/9/P1P1P1P1P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "下二路车的封锁",
+    "annotations": [
+        {
+            "uci": "h1h9",
+            "note": "黑方左侧的马由于受限，无法行动；一旦黑车离开，黑马便会遭到攻击。",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "e3e2",
+                            "note": "红方可以根据局势，将红炮调动到右侧，与红车配合，夹击尚未出动的黑马。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "当车的出动速度足够快时，我们可以向前施压，压制对方车马行动，从而使一侧的车马难以发挥。"
+}

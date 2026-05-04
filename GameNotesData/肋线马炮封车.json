@@ -1,0 +1,30 @@
+{
+    "initial_position": "r1e1kae2/4a1c2/1ch3h2/p1p1pR2p/6p2/2PH3r1/P3P1P1P/1C2C1H2/9/R1EAKAE2 w - - 0 1",
+    "title": "肋线马炮封车",
+    "annotations": [
+        {
+            "uci": "b3b5",
+            "note": "红马受到攻击，红方用炮来保护",
+            "moves": [
+                {
+                    "uci": "c10e8",
+                    "note": "黑方在加强中路防守的同时，也为右侧的车腾出了出动空间。",
+                    "moves": [
+                        {
+                            "uci": "e3d3",
+                            "note": "红方调整阵型之外，同时封锁黑车的出动线路。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": ""
+}

@@ -1,0 +1,46 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3h2/p1p1p3p/6p2/2P6/P3P1PcP/1CH1C1H2/9/R1EAKAER1 w - - 0 1",
+    "title": "巡河炮",
+    "annotations": [
+        {
+            "uci": "b3b5",
+            "note": "当一侧的车马被封锁时，我们可以将炮移动到巡河线，借助兵卒作为炮架，完成兵卒交换，从而活通马路。",
+            "moves": [
+                {
+                    "uci": "c10e8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "g4g5",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "g6g5",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "b5g5",
+                                            "note": "成功解除黑方左翼的封锁后，红方右马可以视情况向前发起进攻。",
+                                            "moves": [],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "当一侧的车马被封锁时，我们可以将炮移动到巡河线，借助兵卒作为炮架，完成兵卒交换，从而活通马路。"
+}

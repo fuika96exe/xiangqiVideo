@@ -1,0 +1,466 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "6 士角炮对中炮略解",
+    "annotations": [
+        {
+            "uci": "h3f3",
+            "note": "平炮士角（称为“士角炮”）是散手棋里常见的棋形，其理想阵形是将来连走兵3+1、马2+3、马3+4三步布成“马后炮”结构掩护盘河马。\n\n平炮也有亮车之意，将来红马2+3后可车1=2出直车。与中炮相比士角炮进攻性较弱但以后可补中相双相相连加固防守且为左正马（马8+7）生根，防守力较强。",
+            "moves": [
+                {
+                    "uci": "b8e8",
+                    "note": "红平士角炮后无法双正马保中兵形成屏风马，最多走成只有一个马保中兵的“反宫马”；所以黑立刻还架中炮威胁包5+4打兵得空头炮很有针对性。黑“右中炮”的理论依据是应对中炮只有屏风马能完全抗衡而红现在无法布成屏风马，当然红先手当后手下多走一步也不吃亏。\n\n黑另外两种主流下法是卒7+1（破坏红兵3+1再马2+3再马3+4的计划，兼活己马）和马8+7（出动大子比红抢出直车车9=8），都是均势。这两种下法红握有选择权且黑方线路没那么明确，所以对初学者推荐包2=5右中炮。\n\n同样平中炮包2=5比包8=5走起来容易下。",
+                    "moves": [
+                        {
+                            "uci": "b1c3",
+                            "note": "保中兵。以下第2-5回合黑的出子的秘诀是红走哪边的子黑就跟着走哪边相同的子，其理由过于繁复略过。",
+                            "moves": [
+                                {
+                                    "uci": "b10c8",
+                                    "note": "正常出子，与红走同一边的马。",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "亮车，下手车1=2。",
+                                            "moves": [
+                                                {
+                                                    "uci": "h10i8",
+                                                    "note": "与红走同一边的马。一般边马不如正马，但此时跳边马可削弱红车1=2威力。\n\n如马8+7，车1=2牵制黑八路炮，车9=8，车2+6，下手红有车2=3吃卒压马的攻击点，黑行棋难度增大。",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "a1b1",
+                                                            "note": "亦可兵7+1双用兵、车1=2出直车等，都是正常出子的可行之着。",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "a10b10",
+                                                                    "note": "出与红同一边的车。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "i1h1",
+                                                                            "note": "亦可兵7+1、兵3+1、炮8+4等。",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "i10h10",
+                                                                                    "note": "出与红同一边的车，下手卒3+1双用卒。至此形成士角炮双直车对右中炮的流行定式，红有炮8+4、炮8+6、炮4+5、兵7+1、兵3+1五种主流下法。限于篇幅我们只介绍炮8+4和兵7+1两路意图相似的下法。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "b3b7",
+                                                                                            "note": "封车，下手兵7+1成“铁封锁”。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "c7c6",
+                                                                                                    "note": "最佳下法，贯彻意图是双用卒兼防铁封锁。下手马3+4威胁红八路过河炮。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "h1h6",
+                                                                                                            "note": "“骑河车禁子有力”，既防马3+4又威胁车2=7吃掉一步卒；是对付对方有中炮无中象（如顺炮、列炮）的常见手段。假如黑是中象而非中炮则三路卒有根红没有车2=7，骑河车效率大降。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "e8f8",
+                                                                                                                    "note": "亦可卒7+1、包5=7等，但不宜包8=7。\n\n黑平炮腾出象3+5补中象虽然亏了一步（包2=5再包5=6）但使红上手车2+5骑河车也效率下降有补偿。",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "h6c6",
+                                                                                                                            "note": "吃一步卒但被黑先手补象找回一先且车一子多动易落下风，不是好棋。\n\n红的思路是假如此时不吃卒以后黑补象后再无机会，但吃卒被利用更不好，",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "c10e8",
+                                                                                                                                    "note": "飞象兼捉车，让红三步车再走一步但不加步数。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "c6c7",
+                                                                                                                                            "note": "既消除黑象捉车又威胁下手炮8=5吃卒兼叫将吃回头车，看似是连消带打；但黑同样有连消带打的应着而落入下风，不好。\n\n此时红的正着有点难想，是炮8=6兑窝车；其他逃车都会被黑利用。",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "f10e9",
+                                                                                                                                                    "note": "既防红炮8=5叫将先手又要下手包6+1串打得子，一举两得。\n\n值得注意的是黑打破常规走士6+5花士象优于士4+5顺士象，限于篇幅不作解释。",
+                                                                                                                                                    "moves": [
+                                                                                                                                                        {
+                                                                                                                                                            "uci": "b7e7",
+                                                                                                                                                            "note": "假如再逃车车走了五步也是下风。",
+                                                                                                                                                            "moves": [
+                                                                                                                                                                {
+                                                                                                                                                                    "uci": "b10b1",
+                                                                                                                                                                    "note": "吃回头车，局部赚得一先。",
+                                                                                                                                                                    "moves": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "uci": "c3b1",
+                                                                                                                                                                            "note": "",
+                                                                                                                                                                            "moves": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "uci": "c8e7",
+                                                                                                                                                                                    "note": "马换炮局部获利。",
+                                                                                                                                                                                    "moves": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "uci": "c7e7",
+                                                                                                                                                                                            "note": "",
+                                                                                                                                                                                            "moves": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                    "uci": "h8h3",
+                                                                                                                                                                                                    "note": "邀兑红炮想形成车马炮对车双马的优势兵种，而且是先手红必须应否则包8=6白打红炮；同时进炮后边马保住七路卒。\n\n至此黑优。",
+                                                                                                                                                                                                    "moves": [],
+                                                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                                                }
+                                                                                                                                                                                            ],
+                                                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ],
+                                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                                }
+                                                                                                                                                                            ],
+                                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                                        }
+                                                                                                                                                                    ],
+                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                        }
+                                                                                                                                                    ],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "uci": "h8g8",
+                                                                                                                    "note": "？",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "h6c6",
+                                                                                                                            "note": "官着，吃掉一步卒且同时牵制黑宫顶线双炮及三路马三子。\n\n细心的读者会发现当前局面与“大列炮略解”里红第6回合炮8+4 、黑卒3+1后演变到第8回合的盘面雷同，只是大列炮里红四路士角炮换成中炮优势更大。",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "h10h4",
+                                                                                                                                    "note": "？一错再错，红有经典调形手段从容化解。\n\n应包5=6赶紧拆掉在中路无攻势还妨碍飞象的无用中炮，以后象3+5先手补象捉车。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "f3d3",
+                                                                                                                                            "note": "官着，经典调形手段让炮保马。",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "h4g4",
+                                                                                                                                                    "note": "贯彻巡河车意图。",
+                                                                                                                                                    "moves": [
+                                                                                                                                                        {
+                                                                                                                                                            "uci": "g1e3",
+                                                                                                                                                            "note": "",
+                                                                                                                                                            "moves": [
+                                                                                                                                                                {
+                                                                                                                                                                    "uci": "g4g6",
+                                                                                                                                                                    "note": "？车走了四步还放活红三路正马显然不合理。现在还是应包5=6拆中炮，虽处下风但阵形稳固还可支撑。",
+                                                                                                                                                                    "moves": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "uci": "c4c5",
+                                                                                                                                                                            "note": "好棋！保留骑河车继续控制黑出子且活通七路马，黑又不敢主动兑车让红兵冲过来威胁三路正马；至此红大优。",
+                                                                                                                                                                            "moves": [],
+                                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                                        }
+                                                                                                                                                                    ],
+                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                        }
+                                                                                                                                                    ],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        },
+                                                                                        {
+                                                                                            "uci": "c4c5",
+                                                                                            "note": "双用兵，下手炮8+4形成“铁封锁”。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "b10b6",
+                                                                                                    "note": "防红铁封锁，且以后可卒9+1支援马9+8打车或卒3+1一步卒兑两步兵。这手亦可车2+6，道理与车2+4如出一辙。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "b3a3",
+                                                                                                            "note": "？黑巡河车准备邀兑时直车邀兑车是“本手”，但此时由于红四路士角炮蹩马脚让三路正马不能保兵不成立。应炮4+5等，双方均势。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "b6b1",
+                                                                                                                    "note": "官着，算准有后续手段。",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "c3b1",
+                                                                                                                            "note": "",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "e8e4",
+                                                                                                                                    "note": "打兵得空头炮，黑优。",
+                                                                                                                                    "moves": [],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "h8e8",
+                    "note": "可行但行棋难度较大对黑走棋精确性的要求很高，并不推荐。",
+                    "moves": [
+                        {
+                            "uci": "b1c3",
+                            "note": "马保中兵。",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "出子兼抢在红前出双用车（车9=8）。",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "正马兼亮车，下手车1=2双用车。",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10h10",
+                                                    "note": "最佳下法，双方谁先抢到双用车谁有利。\n\n至此形成先后易手且左右颠倒的“中炮直车对反宫马”。我们知道先手中炮对反宫马是中炮方略优/稍优，后手中炮对反宫马少走一步变成反宫马方略优/稍优。",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "g4g5",
+                                                            "note": "双用兵，以后伺机马3+4布成“马后炮”理想结构。黑方抢到“车明”，红得“马活”。",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "c7c6",
+                                                                    "note": "互挺一卒非常自然，却是导致盘面下风的第一步略有疑问的棋。黑从现在开始逐步落入下风的原因非常细微不易理解，解说从略。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "i1i2",
+                                                                            "note": "直车出不了就改出横车。",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "h10h6",
+                                                                                    "note": "与“中炮抢挺三兵对两头蛇略解”中红提横车后黑立刻巡河车道理一样。下手卒7+1一步卒兑两步兵。\n\n本来黑挺三卒后马2+3是自然之着，但红有炮4+5串打得子所以不成立。这正是第一回合黑包8=5较包2=5难下的根本原因：红士角炮多发挥了防止黑跳正马的作用。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "i2d2",
+                                                                                            "note": "亮车，下手车6+7点入黑阵骚扰。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "g7g6",
+                                                                                                    "note": "贯彻意图。此时还是不敢马2+3，炮4+5串打得子。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "b3b6",
+                                                                                                            "note": "官着，“丝线牵牛”（亦称“柳条穿鱼”或“猴拉马”）是经典战术手段。现在黑不能卒7+1（否则红炮8=2吃车）但红可兵3+1吃卒，黑处境尴尬。\n\n我们来分析黑陷入被动的根本原因。红能进炮骑河是因为黑没有下马2+3正马；黑没有跳正马是因为怕红炮4+5串打；红有炮4+5串打是因为黑第一回合走了包8=5。\n\n这不是说第一手包8=5后就不能下了，但黑方后续要设法让红潜伏炮4+5防止黑马2+3的效率降低，难度不小。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "b10c8",
+                                                                                                                    "note": "局部巧手，利用红八路骑河炮在马口先手跳正马，不怕炮4+5串打。",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "g5g6",
+                                                                                                                            "note": "对捉正确，在骑河炮离线前发挥最后作用。如炮8=3？放活黑子反而黑稍优。",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "h6h4",
+                                                                                                                                    "note": "最佳落点，以后伺机车8=7捉双。现在八路骑河炮被捉。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "b6b3",
+                                                                                                                                            "note": "官着，掩护三路正马。\n\n下手炮4+5串打兼为三路正马生根，黑来不及车8=7；红白多过河兵且威胁黑七路正马，红优。",
+                                                                                                                                            "moves": [],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "uci": "b6g6",
+                                                                                                                            "note": "？看似既消除黑马捉炮又威胁大底象是“后中先”，但螳螂捕蝉黄雀在后被黑解捉还捉成“先中后”。",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "g10i8",
+                                                                                                                                    "note": "官着，反捉红炮让红无暇炮4+5串打。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "g6g7",
+                                                                                                                                            "note": "单纯躲一步无奈，如炮4+5炮换马吃亏更多。下手炮4+5串打。",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "c8d6",
+                                                                                                                                                    "note": "好棋，既防炮4+5串打又威胁包2=4打车和马4+5踩中兵。至此黑稍优。",
+                                                                                                                                                    "moves": [],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "知识点：\n士角炮的理想阵形\n左中炮较右中炮难下的根本原因"
+}

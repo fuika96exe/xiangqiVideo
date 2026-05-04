@@ -1,0 +1,240 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "后手应对起马局",
+    "annotations": [
+        {
+            "uci": "b1c3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "c7c6",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h3e3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10h10",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "i1h1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "b10c8",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "h3f3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10c8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "h10i8",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "i1h1",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i10h10",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "g4g5",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10c8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "h1g3",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "a10a9",
+                                                    "note": "以下左右边炮左右横车四种常见变化中红炮8=9则马3+2，其他都是车1=7。",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "b3a3",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "c8b6",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        },
+                                                        {
+                                                            "uci": "a1a2",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "a9g9",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        },
+                                                        {
+                                                            "uci": "i1i2",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "a9g9",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        },
+                                                        {
+                                                            "uci": "h3i3",
+                                                            "note": "",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "a9g9",
+                                                                    "note": "均势。",
+                                                                    "moves": [],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        },
+                        {
+                            "uci": "b3a3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "b10c8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "a1b1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "a10b10",
+                                                    "note": "均势。",
+                                                    "moves": [],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "为了方便初学者尽快掌握开局，我们站在后手立场分别推荐六大流行布局的一种应法。我们选择的布局不一定是客观上最好的，但希望能尽量做到 1）简单易懂 2）有攻击性/强制性，对方应着较少，不必过于依赖记忆。我们也不会推演得太深或细解每步用意，但挑选的每一路下法都是经过深思熟虑和软件核对的，可以在实战中放心使用及往下延伸。\n\n此棋谱介绍后手应对起马局的推荐着法"
+}

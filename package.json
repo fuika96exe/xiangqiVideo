@@ -1,0 +1,25 @@
+{
+  "name": "xiangqi-video",
+  "version": "1.0.0",
+  "description": "Xiangqi Automated Video Generation System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render MyComp out/video.mp4",
+    "make": "node scripts/prepareData.js",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.443",
+    "@remotion/tailwind-v4": "4.0.443",
+    "gtts": "^0.2.1",
+    "mp3-duration": "^1.1.0",
+    "msedge-tts": "^2.0.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.443",
+    "tailwindcss": "4.0.0"
+  }
+}

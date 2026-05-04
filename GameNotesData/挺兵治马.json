@@ -1,0 +1,53 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3hc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/9/RHEAKAER1 w - - 0 1",
+    "title": "挺兵治马",
+    "annotations": [
+        {
+            "uci": "c4c5",
+            "note": "红方挺兵是为了压制黑方右侧的马卒，不让他们有发展空间。其次，红方为左侧红马提前准备走动空间",
+            "moves": [
+                {
+                    "uci": "c10e8",
+                    "note": "黑方此时飞象并非最佳选择，更合理的做法是挺卒活马，为后续反击打开局面。",
+                    "moves": [
+                        {
+                            "uci": "g4g5",
+                            "note": "红方挺起双兵治马，使得黑方双马受治，难以组织反击的攻势",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                },
+                {
+                    "uci": "g7g6",
+                    "note": "屏风马需要依靠走动马，来进行反击。为了避免两侧的马卒都被封锁，此时黑方选择挺卒",
+                    "moves": [
+                        {
+                            "uci": "h1h7",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "g8f6",
+                                    "note": "由于黑方上一步挺卒活马，此时黑方可以趁机跃马前进，发起反击。",
+                                    "moves": [],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "这是常见的中炮对屏风马的阵型。"
+}

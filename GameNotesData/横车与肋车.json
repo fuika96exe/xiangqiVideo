@@ -1,0 +1,37 @@
+{
+    "initial_position": "rheakae1r/9/1c2c1h2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/9/RHEAKAE1R w - - 0 1",
+    "title": "横车与肋车",
+    "annotations": [
+        {
+            "uci": "i1i2",
+            "note": "由于红方右车在横向的走动空间更大，因此称为横车。它的作用是把车移动到另一侧，集中子力来进攻。",
+            "moves": [
+                {
+                    "uci": "i10h10",
+                    "note": "当一方选择横车时，另一方通常应以直车应对",
+                    "moves": [
+                        {
+                            "uci": "i2d2",
+                            "note": "横车的目的在于将车调动至对方子力出动较慢的一侧，以发动攻势。\n四路与六路是将帅的关键逃跑路线，称为“肋道”。因此，占据肋道的车也被称为“肋车”。",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        },
+        {
+            "uci": "i1i3",
+            "note": "我们需要避免以这种方式出动车，因为它的走动空间很小.。",
+            "moves": [],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": ""
+}

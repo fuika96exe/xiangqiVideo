@@ -1,0 +1,30 @@
+{
+    "initial_position": "r1eakaer1/9/1ch3h1c/p1p1p1p1p/9/6P2/P1P1P3P/1C2E1HC1/9/RHEAKA1R1 w - - 0 1",
+    "title": "伸炮封车",
+    "annotations": [
+        {
+            "uci": "h3h7",
+            "note": "现在，黑方左翼的车马都被限制发展空间",
+            "moves": [
+                {
+                    "uci": "c7c6",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "b1a3",
+                            "note": "红方通过伸炮封车的手段，使得黑方左翼的棋子都难以开展",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "现在，黑方左马已被红兵限制前进，如果我们再伸炮封住黑车，就能有效压制黑方左翼的车马。"
+}

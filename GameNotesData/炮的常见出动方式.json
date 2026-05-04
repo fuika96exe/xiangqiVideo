@@ -1,0 +1,60 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "炮的常见出动方式",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "炮移动到中路时，称为中炮",
+            "moves": [
+                {
+                    "uci": "h10g8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        },
+        {
+            "uci": "h3d3",
+            "note": "炮移动经过将（帅）的中宫，称为过宫炮",
+            "moves": [
+                {
+                    "uci": "h8e8",
+                    "note": "炮移动到中路，称为中炮，从中路展开进攻。",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        },
+        {
+            "uci": "h3f3",
+            "note": "炮移动到士角，故称为士角炮",
+            "moves": [],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "根据炮所在的位置及其在布局中的作用，炮有不同的出動方式,，以下是這些出動方式的介紹"
+}

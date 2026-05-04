@@ -1,0 +1,213 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "1.1.2 顺炮直车对红车略解2（胡氏双正马）",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "h8e8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10i9",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "b1c3",
+                                                            "note": "出动大子看似平平无奇，却是一代宗师胡荣华发明、颠覆以往理论的”胡氏双正马“。直至上世纪60年代这步棋多走车2+6（可参考“顺炮直车对横车略解”）、马8+9、士4+5等，都不如正马有力。\n\n象棋开局中一般正马优于边马优于拐角马，而同理双正马亦往往是理想出马方式，双边马则在大部分局面里是愚形（特别对方有中炮，因无法以马保护中卒）故非常罕见。",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i9d9",
+                                                                    "note": "同样平车平四比平六目的性强很多，以后可车4+5占兵林再车4=3吃兵压马。同样思路如车9=6再车6+5再车6=7红可炮5-1应对，八路炮保三路马；所以黑横车的落点要看红炮，炮的防守作用在棋盘的另一侧。",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "g4g5",
+                                                                            "note": "明知对方想车4+5攻击弱马却视而不见，是胡荣华的超凡构思。这步挺三兵既活自己的三路马（以后可马3+4跳出）又抑制对方七路马（以后黑无法卒7+1再马7+6跳出），是有双重作用的“双用兵”。\n\n此手属于“活马”。",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "d9d4",
+                                                                                    "note": "想车4=3吃兵捉马但被红巧妙化解，不是好棋。",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "g3f5",
+                                                                                            "note": "面对黑车4=3不设防反而跃马捉车逼黑吃兵，构思精妙。\n\n虽然此局面下炮5=4更受软件青睐，但红先锋马的构思在相似局面中往往见效，是值得学习的战术手段。",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "d4c4",
+                                                                                                    "note": "贯彻计划，因计划不连贯往往意味着吃亏。这里还有一个棋理是开局里车无论到哪个点最多只能算三步，所以黑车虽然走了四步也只能算三步。",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "c3e2",
+                                                                                                            "note": "以后马5+3将在左翼不能前进的坏马变成好马，是这路下法的精华所在。\n\n红马在帅前中士的位置称作“窝心马”（如红炮在帅前中士的位置称作“窝心炮”，同理车作“窝心车”），在一般情况、尤其开局下是愚形。这是因为红马堵住了红帅逃生之路且无法补士，因此能避免就避免，尤其不能久留。\n\n但象棋的最大魅力之一是几乎所有原则都有例外，不能墨守成规。红此时回窝心马的依据是下手能迅速马5+3解决窝心马，且黑大子未到位来不及在这一刹那间进行攻击。所以红的窝心马只是一瞬即逝且无法被利用的短期弱点，不足为患。",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "e8e4",
+                                                                                                                    "note": "同类型局面下的常见攻击窝心马手段，俗称“炮镇五子”。红此时中炮，窝心马，双士和帅五个子都不能动。一般情况下这是个非常有利的局部棋形，但由于黑中炮立不住有走假之嫌。",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "f5d6",
+                                                                                                                            "note": "蹬双。",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "c4d4",
+                                                                                                                                    "note": "为了保炮只能平移，不能进退。",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "d6e4",
+                                                                                                                                            "note": "开局马的价值明显比炮低，因为马是”短兵器“行动很慢，特别正马如果没有挺起马前卒无法前进，而炮（和车）是”长兵器“来去如风；所以马换炮是很便宜的。",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "d4e4",
+                                                                                                                                                    "note": "我们来算一下步数。红方直车一步，三兵一步，中炮一步，窝心马因我原地马都需要一步到正马位不算步数。而黑方车算三步（开局无论什么点车最多算三步），马一步，总共四步。三步对四步，乍看黑还反了一先，但红的后续手段还没有走尽：",
+                                                                                                                                                    "moves": [
+                                                                                                                                                        {
+                                                                                                                                                            "uci": "e2c3",
+                                                                                                                                                            "note": "",
+                                                                                                                                                            "moves": [
+                                                                                                                                                                {
+                                                                                                                                                                    "uci": "e4e5",
+                                                                                                                                                                    "note": "这一回合黑车在兵林或骑河功效差不多没有加步，但红马由窝心跳到正马位加了一步，所以现在四步对四步平先。\n\n但：1）黑开局炮换马 2）黑七路马不活（因红挺了三兵） 3）中车暂时难以动弹且以后还很有可能被利用，故红优。",
+                                                                                                                                                                    "moves": [],
+                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                        }
+                                                                                                                                                    ],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                },
+                                                                {
+                                                                    "uci": "i9f9",
+                                                                    "note": "不好",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "c4c5",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "f9f4",
+                                                                                    "note": "",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "g4g5",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "f4g4",
+                                                                                                    "note": "",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "e3e2",
+                                                                                                            "note": "紅右馬受到左炮保護，不是一個好的攻擊目標",
+                                                                                                            "moves": [],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "知识点：\n开局正马优于边马优于拐角马；双正马优于双边马\n开局中炮的防守作用在七盘的另一侧，所以横车应该攻击有炮侧的马\n双用兵\n计划要连贯，否则往往吃亏\n开局车无论到哪个点最多只能算三步，再走不加步\n窝心马是愚形，不能久留"
+}

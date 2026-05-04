@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.font-serif {
+    font-family: 'Grenze', serif;
+}
+
+.text-yellow-500 {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.tracking-widest {
+    letter-spacing: 0.3em;
+}
+
+/* Glassmorphism for subtitles */
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}

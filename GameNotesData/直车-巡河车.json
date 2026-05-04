@@ -1,0 +1,46 @@
+{
+    "initial_position": "r1eakae1r/9/1ch2ch2/p3p3p/2p3p2/9/P1P1P1P1P/C1H1C1H2/9/1REAKAE1R w - - 0 1",
+    "title": "直车-巡河车",
+    "annotations": [
+        {
+            "uci": "b1b5",
+            "note": "红车目标明确，兑兵活马",
+            "moves": [
+                {
+                    "uci": "i10h10",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "c4c5",
+                            "note": "红方兑兵后，红马就可以向前进攻。",
+                            "moves": [
+                                {
+                                    "uci": "c6c5",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "b5c5",
+                                            "note": "",
+                                            "moves": [],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "当双马被对方的兵卒压制，无法通过走兵来活马时，通常会先将车移动到巡河线。这样一来，红方就可以走动红兵进行交换，从而成功活通马路。"
+}

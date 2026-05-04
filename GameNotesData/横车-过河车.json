@@ -1,0 +1,40 @@
+{
+    "initial_position": "rheakaer1/9/1c2c1h2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1H2/8R/RHEAKAE2 w - - 0 1",
+    "title": "横车-过河车",
+    "annotations": [
+        {
+            "uci": "i2d2",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "b10c8",
+                    "note": "红方根据黑马走动的位置，常见的进攻方式是将车移至卒林线，既吃卒又攻击黑马",
+                    "moves": [
+                        {
+                            "uci": "d2d7",
+                            "note": "红方识别出黑方的弱马，以过河车形式进攻，对黑方形成压力",
+                            "moves": [],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [
+                {
+                    "c1": "i",
+                    "c2": "d",
+                    "r1": 2,
+                    "r2": 2,
+                    "type": {
+                        "color": "#327EE2"
+                    }
+                }
+            ],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "红方出动横车，意在将其调至左翼，集中兵力发动攻势。同时，红车占据肋道，不仅具备一定的防守作用，还能根据局势变化，对黑方进攻形成威胁。"
+}
