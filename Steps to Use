@@ -1,0 +1,6 @@
+Step 1: Install Node.Js
+Step 2: npm install
+Step 3: npm run make -- --file="你的文件名.json"
+
+Example 1: npm run make -- --file="GameNotesData/lesson1.json"
+Example 2: npm run make -- --file="C:\Users\Someone\Desktop\test.json"
