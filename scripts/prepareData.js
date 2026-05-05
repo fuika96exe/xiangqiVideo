@@ -100,7 +100,21 @@ async function prepareData() {
     console.log("🚀 Starting data preparation...");
     
     console.log("📖 Reading game file:", dataFilePath);
-    const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
+    
+    let resolvedPath = dataFilePath;
+    if (!fs.existsSync(resolvedPath)) {
+        const altPath = path.join(__dirname, '..', 'GameNotesData', dataFilePath);
+        if (fs.existsSync(altPath)) {
+            resolvedPath = altPath;
+            console.log("📍 Found file in GameNotesData:", resolvedPath);
+        } else {
+            console.error(`❌ Error: File not found: ${dataFilePath}`);
+            console.error(`Checked locations:\n - ${path.resolve(dataFilePath)}\n - ${altPath}`);
+            process.exit(1);
+        }
+    }
+
+    const data = JSON.parse(fs.readFileSync(resolvedPath, 'utf-8'));
     
     // Detect language from title or first note
     const firstNote = data.annotations && data.annotations[0] && data.annotations[0].note || "";
@@ -112,7 +126,52 @@ async function prepareData() {
     const timeline = [];
     let audioCounter = 0;
 
-        async function processMoveNode(node, currentBoard, prevBoard, isMainLine, depth) {
+    async function generateAudio(text) {
+        const sentences = splitCommentary(text);
+        const subtitles = [];
+        let totalFrames = 0;
+        
+        for (const s of sentences) {
+            const filename = `audio_${audioCounter++}.mp3`;
+            const filepath = path.join(AUDIO_DIR, filename);
+            
+            let success = false;
+            for (let attempt = 1; attempt <= 3; attempt++) {
+                try {
+                    console.log(`🎙️ [Attempt ${attempt}] Generating: "${s.substring(0, 20)}${s.length > 20 ? '...' : ''}"`);
+                    const result = tts.toStream(s);
+                    await new Promise((res, rej) => {
+                        const ws = fs.createWriteStream(filepath);
+                        result.audioStream.pipe(ws);
+                        ws.on('close', res);
+                        ws.on('error', rej);
+                        result.audioStream.on('error', rej);
+                        setTimeout(() => rej(new Error("TTS Timeout")), 10000);
+                    });
+
+                    if (fs.existsSync(filepath) && fs.statSync(filepath).size > 0) {
+                        success = true;
+                        break;
+                    }
+                } catch (err) {
+                    console.warn(`⚠️ Attempt ${attempt} failed for ${filename}. Retrying...`);
+                }
+            }
+
+            if (!success) {
+                console.error(`❌ Error: Audio generation failed after 3 attempts for: ${filename}`);
+                process.exit(1);
+            }
+
+            const duration = await new Promise(r => mp3Duration(filepath, (e, d) => r(d || 1)));
+            const frames = Math.ceil(duration * 30);
+            subtitles.push({ text: s, audioFile: `/audio/${filename}`, durationInFrames: frames });
+            totalFrames += frames;
+        }
+        return { subtitles, totalFrames };
+    }
+
+    async function processMoveNode(node, currentBoard, prevBoard, isMainLine, depth) {
         const scene = { 
             type: 'move', 
             uci: node.uci, 
@@ -122,63 +181,56 @@ async function prepareData() {
             depth, 
             title: data.title || "象棋兵法", 
             subtitles: [],
-            audioStartFrame: 15 // 0.5s pause after move
+            audioStartFrame: 15
         };
+
         if (node.note) {
-            const sentences = splitCommentary(node.note);
-            let totalFrames = 0;
-            for (const s of sentences) {
-                const filename = `audio_${audioCounter++}.mp3`;
-                const filepath = path.join(AUDIO_DIR, filename);
-                
-                let success = false;
-                for (let attempt = 1; attempt <= 3; attempt++) {
-                    try {
-                        console.log(`🎙️ [Attempt ${attempt}] Generating: "${s.substring(0, 20)}${s.length > 20 ? '...' : ''}"`);
-                        const result = tts.toStream(s);
-                        await new Promise((res, rej) => {
-                            const ws = fs.createWriteStream(filepath);
-                            result.audioStream.pipe(ws);
-                            ws.on('close', res);
-                            ws.on('error', rej);
-                            result.audioStream.on('error', rej);
-                            // Set a timeout for the stream
-                            setTimeout(() => rej(new Error("TTS Timeout")), 10000);
-                        });
-
-                        if (fs.existsSync(filepath) && fs.statSync(filepath).size > 0) {
-                            success = true;
-                            break;
-                        }
-                    } catch (err) {
-                        console.warn(`⚠️ Attempt ${attempt} failed for ${filename}. Retrying...`);
-                    }
-                }
-
-                if (!success) {
-                    console.error(`❌ Error: Audio generation failed after 3 attempts for: ${filename}`);
-                    process.exit(1);
-                }
-
-                const duration = await new Promise(r => mp3Duration(filepath, (e, d) => r(d || 1)));
-                const frames = Math.ceil(duration * 30);
-                scene.subtitles.push({ text: s, audioFile: `/audio/${filename}`, durationInFrames: frames });
-                totalFrames += frames;
-            }
+            const { subtitles, totalFrames } = await generateAudio(node.note);
+            scene.subtitles = subtitles;
             scene.durationInFrames = scene.audioStartFrame + totalFrames + 15;
         } else {
             scene.durationInFrames = 45;
         }
+        
         timeline.push(scene);
+
         if (node.moves && node.moves.length > 0) {
-            const mainMove = node.moves[0];
-            await processMoveNode(mainMove, applyMove(currentBoard, mainMove.uci), currentBoard, isMainLine, depth);
+            // Process branches in reverse order
+            const reversedMoves = [...node.moves].reverse();
+            for (const nextMove of reversedMoves) {
+                await processMoveNode(nextMove, applyMove(currentBoard, nextMove.uci), currentBoard, false, depth + 1);
+            }
         }
     }
 
     const { board: initialBoard } = parseFen(data.initial_position);
+
+    // Initial Position Annotation
+    const initialNote = data['initial position annotation'] || data.initial_position_annotation;
+    if (initialNote) {
+        console.log("📖 Processing initial position annotation...");
+        const scene = {
+            type: 'initial',
+            board: initialBoard,
+            prevBoard: initialBoard,
+            isMainLine: true,
+            depth: 0,
+            title: data.title || "象棋兵法",
+            subtitles: [],
+            audioStartFrame: 10
+        };
+        const { subtitles, totalFrames } = await generateAudio(initialNote);
+        scene.subtitles = subtitles;
+        scene.durationInFrames = scene.audioStartFrame + totalFrames + 15;
+        timeline.push(scene);
+    }
+
     if (data.annotations && data.annotations.length > 0) {
-        await processMoveNode(data.annotations[0], applyMove(initialBoard, data.annotations[0].uci), initialBoard, true, 0);
+        // Process top-level annotations in reverse order
+        const reversedAnnos = [...data.annotations].reverse();
+        for (const anno of reversedAnnos) {
+            await processMoveNode(anno, applyMove(initialBoard, anno.uci), initialBoard, true, 0);
+        }
     }
 
     fs.writeFileSync(OUTPUT_JSON, JSON.stringify(timeline, null, 2));
