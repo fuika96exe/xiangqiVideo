@@ -1,78 +1,87 @@
 import React from 'react';
-import { PIECES, RED, BLACK, PIECE_TEXT } from '../constants';
-import { isValidMove } from '../utils/boardUtils';
+import { RED, BLACK } from '../constants';
+import { staticFile } from 'remotion';
 
 const Board = ({
     board,
-    turn,
-    selected,
-    onCellClick,
-    moveHistory,
-    viewIndex,
-    winner,
-    vsComputerMode,
-    userSide,
-    jumpToMove
+    prevBoard,
+    uci,
+    frame = 0,
+    durationInFrames = 45
 }) => {
-    const handlePrev = () => {
-        if (viewIndex === -1) {
-            if (moveHistory.length > 0) jumpToMove(moveHistory.length - 1);
-            else jumpToMove(-2);
-        } else if (viewIndex > 0) {
-            jumpToMove(viewIndex - 1);
-        } else if (viewIndex === 0) {
-            jumpToMove(-2);
+    const animationDuration = 20; // 20 frames of transition
+    
+    // Parse UCI coordinates using regex to support row 10 (e.g. h10g8)
+    let lastMoveCoords = null;
+    if (uci) {
+        const match = uci.match(/^([a-i])([0-9]+)([a-i])([0-9]+)$/);
+        if (match) {
+            const c1 = match[1].charCodeAt(0) - 'a'.charCodeAt(0);
+            const r1 = 10 - parseInt(match[2], 10);
+            const c2 = match[3].charCodeAt(0) - 'a'.charCodeAt(0);
+            const r2 = 10 - parseInt(match[4], 10);
+            lastMoveCoords = { r1, c1, r2, c2 };
         }
+    }
+
+    const isAnimating = uci && frame < animationDuration && prevBoard;
+    const activeBoard = board;
+
+    const getPieceSvg = (color, type) => {
+        const colorStr = color === RED ? 'red' : 'black';
+        return staticFile(`assets/new-board/cn-${colorStr}-pieces-dark/cn-${colorStr}-${type}-dark.svg`);
     };
 
-    const handleNext = () => {
-        if (viewIndex === -2) {
-            if (moveHistory.length > 0) jumpToMove(0);
-            else jumpToMove(-1);
-        } else if (viewIndex >= 0 && viewIndex < moveHistory.length - 1) {
-            jumpToMove(viewIndex + 1);
-        } else if (viewIndex === moveHistory.length - 1) {
-            jumpToMove(-1);
-        }
+    const getPieceBg = (color) => {
+        const colorStr = color === RED ? 'red' : 'black';
+        return staticFile(`assets/new-board/new-board-images/${colorStr}-wooden-piece-bg.svg`);
     };
 
     return (
         <div className="w-full flex justify-center items-start mt-4">
-            <div className="relative p-1 md:p-3 bg-[#eecfa1] rounded shadow-2xl border-4 border-[#8b5a2b] select-none">
-                <div className="absolute inset-2 border-2 border-[#8b5a2b] pointer-events-none opacity-50"></div>
-                <div className="relative" style={{ width: 'min(90vw, 450px)', aspectRatio: '9/10' }}>
-                    {/* SVG 棋盤繪製 */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 90 100">
-                        <defs>
-                            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                                <path d="M 10 0 L 10 10 M 0 10 L 10 10" fill="none" stroke="#8b5a2b" strokeWidth="0.5" />
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="#eecfa1" />
+            {/* Outer wooden border container */}
+            <div 
+                className="relative p-3 rounded-2xl shadow-xl border-[4px] border-[#a05c30]/35 select-none"
+                style={{
+                    backgroundImage: `url(${staticFile('assets/new-board/new-board-images/wooden-board-bg.svg')})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                {/* Subtle double-line border overlay */}
+                <div className="absolute inset-1.5 border border-[#a05c30]/10 pointer-events-none rounded-lg"></div>
+                
+                <div className="relative" style={{ width: 'min(90vw, 455px)', aspectRatio: '9/10' }}>
+                    {/* SVG Board Lines Overlay */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 90 100" style={{ zIndex: 10 }}>
+                        {/* Classic double-line border */}
+                        <rect x="3.8" y="3.8" width="82.4" height="92.4" rx="2.0" ry="2.0" fill="none" stroke="#9c5324" strokeWidth="0.75" />
+                        <rect x="5.0" y="5.0" width="80.0" height="90.0" fill="none" stroke="#9c5324" strokeWidth="0.25" />
+
                         {Array.from({ length: 10 }).map((_, i) => (
-                            <line key={`h-${i}`} x1="5" y1={5 + i * 10} x2="85" y2={5 + i * 10} stroke="#8b5a2b" strokeWidth="0.6" />
+                            <line key={`h-${i}`} x1="5" y1={5 + i * 10} x2="85" y2={5 + i * 10} stroke="#9c5324" strokeWidth="0.25" />
                         ))}
                         {Array.from({ length: 9 }).map((_, i) => (
                             <React.Fragment key={`v-${i}`}>
-                                <line x1={5 + i * 10} y1="5" x2={5 + i * 10} y2="45" stroke="#8b5a2b" strokeWidth="0.6" />
-                                <line x1={5 + i * 10} y1="55" x2={5 + i * 10} y2="95" stroke="#8b5a2b" strokeWidth="0.6" />
+                                <line x1={5 + i * 10} y1="5" x2={5 + i * 10} y2="45" stroke="#9c5324" strokeWidth="0.25" />
+                                <line x1={5 + i * 10} y1="55" x2={5 + i * 10} y2="95" stroke="#9c5324" strokeWidth="0.25" />
                             </React.Fragment>
                         ))}
-                        <line x1="5" y1="45" x2="5" y2="55" stroke="#8b5a2b" strokeWidth="0.6" />
-                        <line x1="85" y1="45" x2="85" y2="55" stroke="#8b5a2b" strokeWidth="0.6" />
-                        <line x1="35" y1="5" x2="55" y2="25" stroke="#8b5a2b" strokeWidth="0.6" />
-                        <line x1="55" y1="5" x2="35" y2="25" stroke="#8b5a2b" strokeWidth="0.6" />
-                        <line x1="35" y1="75" x2="55" y2="95" stroke="#8b5a2b" strokeWidth="0.6" />
-                        <line x1="55" y1="75" x2="35" y2="95" stroke="#8b5a2b" strokeWidth="0.6" />
+                        <line x1="5" y1="45" x2="5" y2="55" stroke="#9c5324" strokeWidth="0.25" />
+                        <line x1="85" y1="45" x2="85" y2="55" stroke="#9c5324" strokeWidth="0.25" />
+                        <line x1="35" y1="5" x2="55" y2="25" stroke="#9c5324" strokeWidth="0.25" />
+                        <line x1="55" y1="5" x2="35" y2="25" stroke="#9c5324" strokeWidth="0.25" />
+                        <line x1="35" y1="75" x2="55" y2="95" stroke="#9c5324" strokeWidth="0.25" />
+                        <line x1="55" y1="75" x2="35" y2="95" stroke="#9c5324" strokeWidth="0.25" />
                         {[
                             [2, 1], [2, 7], [3, 0], [3, 2], [3, 4], [3, 6], [3, 8],
                             [7, 1], [7, 7], [6, 0], [6, 2], [6, 4], [6, 6], [6, 8]
                         ].map(([r, c], idx) => {
                             const x = 5 + c * 10;
                             const y = 5 + r * 10;
-                            const offset = 1; const len = 3;
+                            const offset = 0.8; const len = 1.8;
                             return (
-                                <g key={`mark-${idx}`} stroke="#8b5a2b" strokeWidth="0.6" fill="none">
+                                <g key={`mark-${idx}`} stroke="#9c5324" strokeWidth="0.25" fill="none" opacity="0.85">
                                     {c > 0 && <path d={`M ${x - offset - len} ${y - offset} L ${x - offset} ${y - offset} L ${x - offset} ${y - offset - len}`} />}
                                     {c < 8 && <path d={`M ${x + offset + len} ${y - offset} L ${x + offset} ${y - offset} L ${x + offset} ${y - offset - len}`} />}
                                     {c > 0 && <path d={`M ${x - offset - len} ${y + offset} L ${x - offset} ${y + offset} L ${x - offset} ${y + offset + len}`} />}
@@ -80,58 +89,103 @@ const Board = ({
                                 </g>
                             );
                         })}
-                        <text x="25" y="52" fontSize="6" fontFamily="KaiTi, serif" fill="#8b5a2b" textAnchor="middle" dominantBaseline="middle" style={{ writingMode: 'horizontal-tb' }}>楚 河</text>
-                        <text x="65" y="52" fontSize="6" fontFamily="KaiTi, serif" fill="#8b5a2b" textAnchor="middle" dominantBaseline="middle" style={{ writingMode: 'horizontal-tb' }}>漢 界</text>
+                        {/* Calligraphy river names and website watermark */}
+                        <text x="20" y="51" fontSize="6.5" fontFamily="KaiTi, 楷体, 'Microsoft YaHei', serif" fontWeight="bold" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">楚 河</text>
+                        <text x="45" y="51" fontSize="3.5" fontFamily="'Times New Roman', Georgia, serif" fontWeight="bold" fill="#9c5324" opacity="0.35" textAnchor="middle" dominantBaseline="middle">Xiangqi.com</text>
+                        <text x="70" y="51" fontSize="6.5" fontFamily="KaiTi, 楷体, 'Microsoft YaHei', serif" fontWeight="bold" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">漢 界</text>
+
+                        {/* Coordinates (Black: left to right 1-9, Red: right to left 1-9) */}
+                        {Array.from({ length: 9 }).map((_, i) => (
+                            <React.Fragment key={`coords-${i}`}>
+                                <text x={5 + i * 10} y="2" fontSize="2.8" fontFamily="Arial, sans-serif" fontWeight="bold" fill="#9c5324" opacity="0.75" textAnchor="middle" dominantBaseline="middle">{i + 1}</text>
+                                <text x={85 - i * 10} y="98" fontSize="2.8" fontFamily="Arial, sans-serif" fontWeight="bold" fill="#9c5324" opacity="0.75" textAnchor="middle" dominantBaseline="middle">{i + 1}</text>
+                            </React.Fragment>
+                        ))}
                     </svg>
 
-                    {/* 棋子渲染層 */}
-                    <div className="absolute inset-0 grid grid-rows-10 grid-cols-9" style={{ width: '100%', height: '100%' }}>
-                        {board.map((row, r) => (
+                    {/* Pieces Grid Overlay */}
+                    <div 
+                        className="absolute inset-0 grid" 
+                        style={{ 
+                            width: '100%', 
+                            height: '100%', 
+                            zIndex: 20,
+                            gridTemplateRows: 'repeat(10, minmax(0, 1fr))',
+                            gridTemplateColumns: 'repeat(9, minmax(0, 1fr))'
+                        }}
+                    >
+                        {activeBoard.map((row, r) => (
                             row.map((piece, c) => {
-                                const isSelected = selected && selected.r === r && selected.c === c;
-                                const isPossibleMove = selected && piece === null && isValidMove(board, selected.r, selected.c, r, c, board[selected.r][selected.c].color);
-                                const isTarget = selected && piece && piece.color !== turn && isValidMove(board, selected.r, selected.c, r, c, board[selected.r][selected.c].color);
-
-                                // Highlight Last Move
-                                // Calculate last move based on viewIndex/moveHistory
-                                let lastMoveCoords = null;
-                                const lastMoveIdx = viewIndex === -1 ? moveHistory.length - 1 : viewIndex;
-
-                                if (lastMoveIdx >= 0 && lastMoveIdx < moveHistory.length) {
-                                    const m = moveHistory[lastMoveIdx];
-                                    const c1 = m.charCodeAt(0) - 'a'.charCodeAt(0);
-                                    const r1 = 9 - parseInt(m[1]);
-                                    const c2 = m.charCodeAt(2) - 'a'.charCodeAt(0);
-                                    const r2 = 9 - parseInt(m[3]);
-                                    lastMoveCoords = { r1, c1, r2, c2 };
-                                }
-
-                                const isLastMoveFrom = lastMoveCoords && lastMoveCoords.r1 === r && lastMoveCoords.c1 === c;
-                                const isLastMoveTo = lastMoveCoords && lastMoveCoords.r2 === r && lastMoveCoords.c2 === c;
+                                const isSource = lastMoveCoords && lastMoveCoords.r1 === r && lastMoveCoords.c1 === c;
+                                const isDest = lastMoveCoords && lastMoveCoords.r2 === r && lastMoveCoords.c2 === c;
 
                                 return (
-                                    <div key={`${r}-${c}`} onClick={() => onCellClick(r, c)} className="relative flex justify-center items-center cursor-pointer">
-                                        {(isLastMoveFrom || isLastMoveTo) && <div className="absolute inset-0 bg-blue-400 opacity-40 z-0"></div>}
-                                        {isPossibleMove && <div className="absolute w-3 h-3 bg-green-500 rounded-full opacity-50 z-10"></div>}
-                                        {isTarget && <div className="absolute w-full h-full border-2 border-red-500 rounded-full opacity-60 z-0 scale-75"></div>}
+                                    <div key={`${r}-${c}`} className="relative flex justify-center items-center">
+                                        {isSource && (
+                                            <div className="absolute w-[94%] h-[94%] border-[1.5px] border-dashed border-[#1e88e5] bg-[#1e88e5]/15 z-10 rounded-md scale-95"></div>
+                                        )}
+                                        {isDest && (
+                                            <div className="absolute w-[94%] h-[94%] border-[1.8px] border-solid border-[#1e88e5] bg-[#1e88e5]/25 z-10 rounded-md scale-95"></div>
+                                        )}
+                                        
                                         {piece && (
-                                            <div
-                                                className={`
-                                                    relative z-20 flex justify-center items-center rounded-full shadow-[2px_2px_4px_rgba(0,0,0,0.4)]
-                                                    ${isSelected ? 'scale-110 ring-2 ring-yellow-400 -translate-y-1 shadow-[4px_4px_8px_rgba(0,0,0,0.5)]' : ''}
-                                                    ${piece.color === RED ? 'bg-[#f0d0b0] text-red-700 border-red-800' : 'bg-[#f0d0b0] text-black border-black'}
-                                                `}
-                                                style={{
-                                                    width: '85%', height: '85%', borderWidth: '2px',
-                                                    background: 'radial-gradient(circle at 30% 30%, #fff0e0, #e0c0a0)',
-                                                    boxShadow: isSelected ? 'inset 0 0 10px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.3)' : 'inset 0 0 5px rgba(0,0,0,0.1), 1px 1px 3px rgba(0,0,0,0.4)'
-                                                }}
-                                            >
-                                                <div className={`absolute inset-1 rounded-full border ${piece.color === RED ? 'border-red-700/30' : 'border-black/30'}`}></div>
-                                                <span className="font-bold font-serif text-[clamp(12px,4vw,28px)] leading-none select-none" style={{ fontFamily: '"KaiTi", "楷體", serif' }}>
-                                                    {PIECE_TEXT[piece.color][piece.type]}
-                                                </span>
-                                            </div>
+                                            (() => {
+                                                const isRedChariotOrHorse = piece.color === RED && (piece.type === 'chariot' || piece.type === 'horse');
+                                                const pieceSize = isRedChariotOrHorse ? '72%' : '64%';
+                                                
+                                                let transformStr = 'none';
+                                                if (piece.color === BLACK && piece.type === 'elephant') {
+                                                    transformStr = 'translateX(0.5px)';
+                                                } else if (piece.color === BLACK && piece.type === 'cannon') {
+                                                    transformStr = 'translateY(-0.5px)';
+                                                }
+
+                                                // Check if this cell contains the moving piece during translation
+                                                const isMoving = isAnimating && isDest;
+                                                let animatingStyle = {
+                                                    transform: 'translate3d(0, 0, 0)',
+                                                    willChange: 'transform'
+                                                };
+                                                if (isMoving) {
+                                                    const p = Math.min(1, frame / animationDuration);
+                                                    const easeProgress = 1 - Math.pow(1 - p, 3);
+                                                    const dx = (lastMoveCoords.c1 - lastMoveCoords.c2) * (1 - easeProgress) * 100;
+                                                    const dy = (lastMoveCoords.r1 - lastMoveCoords.r2) * (1 - easeProgress) * 100;
+                                                    animatingStyle = {
+                                                        transform: `translate3d(${dx}%, ${dy}%, 0)`,
+                                                        willChange: 'transform'
+                                                    };
+                                                }
+
+                                                return (
+                                                    <div
+                                                        className={`absolute inset-0 flex justify-center items-center ${isMoving ? 'z-30' : 'z-20'}`}
+                                                        style={animatingStyle}
+                                                    >
+                                                        <div
+                                                            className="relative flex justify-center items-center rounded-full"
+                                                            style={{
+                                                                width: '90%', height: '90%',
+                                                                backgroundImage: `url(${getPieceBg(piece.color)})`,
+                                                                backgroundSize: 'cover',
+                                                                backgroundPosition: 'center',
+                                                                filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.45))'
+                                                            }}
+                                                        >
+                                                             <img 
+                                                                 src={getPieceSvg(piece.color, piece.type)} 
+                                                                 alt={`${piece.color} ${piece.type}`} 
+                                                                 style={{ 
+                                                                     width: pieceSize, 
+                                                                     height: pieceSize, 
+                                                                     transform: transformStr,
+                                                                     pointerEvents: 'none' 
+                                                                 }}
+                                                             />
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })()
                                         )}
                                     </div>
                                 );

@@ -63,38 +63,63 @@ function applyMove(board, uci) {
     return newBoard;
 }
 
+function cleanSentence(s) {
+    return s.replace(/^[，,；;。！？.!?\s\n]+/, '').replace(/[，,；;。！？.!?\s\n]+$/, '').trim();
+}
+
 function splitCommentary(text) {
     if (!text) return [];
-    const parts = text.match(/([^。！？.!?]+[。！？.!?]?)/g) || [text];
+    const parts = text.match(/([^。！？.!?\n]+[。！？.!?\n]?)/g) || [text];
     const finalParts = [];
     
     parts.forEach(part => {
-        if (part.length <= 18) {
-            const trimmed = part.trim();
-            // Only add if it contains more than just punctuation
-            if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(trimmed)) {
-                finalParts.push(trimmed);
+        const cleanedPart = cleanSentence(part);
+        if (cleanedPart.length <= 18) {
+            if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(cleanedPart)) {
+                finalParts.push(cleanedPart);
             }
         } else {
-            const subParts = part.split(/([，,])/);
+            const subParts = cleanedPart.split(/([，,；;\s])/);
             let current = "";
             subParts.forEach(sub => {
-                if ((current + sub).length > 18 && current.length > 0) {
-                    if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(current)) {
-                        finalParts.push(current.trim());
+                const combined = current + sub;
+                const cleanedCombined = cleanSentence(combined);
+                if (cleanedCombined.length > 18 && cleanSentence(current).length > 0) {
+                    const toPush = cleanSentence(current);
+                    if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(toPush)) {
+                        finalParts.push(toPush);
                     }
                     current = sub;
                 } else {
-                    current += sub;
+                    current = combined;
                 }
             });
-            if (current.trim() && /[a-zA-Z0-9\u4e00-\u9fa5]/.test(current)) {
-                finalParts.push(current.trim());
+            const toPush = cleanSentence(current);
+            if (toPush && /[a-zA-Z0-9\u4e00-\u9fa5]/.test(toPush)) {
+                finalParts.push(toPush);
             }
         }
     });
     return finalParts;
 }
+
+function convertMoveNotation(text) {
+    if (!text) return "";
+    const numMap = {
+        '1': '一', '2': '二', '3': '三', '4': '四', '5': '五',
+        '6': '六', '7': '七', '8': '八', '9': '九'
+    };
+    const actionMap = {
+        '+': '进', '-': '退', '=': '平'
+    };
+    return text.replace(/([车马炮卒兵仕士相象帅将])(\d)([\+\-=])(\d)/g, (match, piece, n1, action, n2) => {
+        const cn1 = numMap[n1] || n1;
+        const cnAct = actionMap[action] || action;
+        const cn2 = numMap[n2] || n2;
+        return `${piece}${cn1}${cnAct}${cn2}`;
+    });
+}
+
 
 async function prepareData() {
     console.log("🚀 Starting data preparation...");
@@ -115,6 +140,19 @@ async function prepareData() {
     }
 
     const data = JSON.parse(fs.readFileSync(resolvedPath, 'utf-8'));
+    
+    // Convert Chinese move notations
+    if (data.note) data.note = convertMoveNotation(data.note);
+    if (data['initial position annotation']) data['initial position annotation'] = convertMoveNotation(data['initial position annotation']);
+    if (data.initial_position_annotation) data.initial_position_annotation = convertMoveNotation(data.initial_position_annotation);
+    if (data.annotations) {
+        const processNode = (node) => {
+            if (node.note) node.note = convertMoveNotation(node.note);
+            if (node.moves) node.moves.forEach(processNode);
+        };
+        data.annotations.forEach(processNode);
+    }
+
     
     // Detect language from title or first note
     const firstNote = data.annotations && data.annotations[0] && data.annotations[0].note || "";

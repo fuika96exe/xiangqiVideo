@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render MyComp out/video.mp4",
+    "render": "remotion render MyComp out/video.mp4 --browser-executable=\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
     "make": "node scripts/prepareData.js",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"

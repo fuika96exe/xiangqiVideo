@@ -7,3 +7,5 @@ dist
 out
 public/audio/*.mp3
 src/video-timeline.json
+*.mp4
+
