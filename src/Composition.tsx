@@ -1,4 +1,4 @@
-import { AbsoluteFill, Series, Audio, staticFile, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Series, Audio, staticFile, useCurrentFrame, Sequence } from 'remotion';
 import timeline from './video-timeline.json';
 import Board from './components/Board';
 import React from 'react';
@@ -154,20 +154,11 @@ export const MyComposition: React.FC = () => {
                             <SceneSequence scene={scene} />
                             
                             {/* Audio Tracks */}
-                            <Series>
-                                {[
-                                    scene.audioStartFrame > 0 ? (
-                                        <Series.Sequence durationInFrames={scene.audioStartFrame}>
-                                            <div />
-                                        </Series.Sequence>
-                                    ) : null,
-                                    ...(scene.subtitles || []).map((sub, sIdx) => (
-                                        <Series.Sequence key={sIdx} durationInFrames={sub.durationInFrames}>
-                                            <Audio src={staticFile(sub.audioFile.replace('/audio/', 'audio/'))} />
-                                        </Series.Sequence>
-                                    ))
-                                ].filter(Boolean)}
-                            </Series>
+                            {scene.audios && (scene.audios as any[]).map((audio, aIdx) => (
+                                <Sequence key={aIdx} from={audio.startFrame} durationInFrames={audio.durationInFrames}>
+                                    <Audio src={staticFile(audio.file.replace('/audio/', 'audio/'))} />
+                                </Sequence>
+                            ))}
                         </Series.Sequence>
                     );
                 })}
