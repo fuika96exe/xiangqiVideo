@@ -69,22 +69,26 @@ function cleanSentence(s) {
 
 function splitCommentary(text) {
     if (!text) return [];
+    const isEnglishText = /[a-zA-Z]/.test(text) && !/[\u4e00-\u9fa5]/.test(text);
+    const limit = isEnglishText ? 65 : 18;
+    const splitRegex = isEnglishText ? /([,;])/ : /([，,；;\s])/;
+
     const parts = text.match(/([^。！？.!?\n]+[。！？.!?\n]?)/g) || [text];
     const finalParts = [];
     
     parts.forEach(part => {
         const cleanedPart = cleanSentence(part);
-        if (cleanedPart.length <= 18) {
+        if (cleanedPart.length <= limit) {
             if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(cleanedPart)) {
                 finalParts.push(cleanedPart);
             }
         } else {
-            const subParts = cleanedPart.split(/([，,；;\s])/);
+            const subParts = cleanedPart.split(splitRegex);
             let current = "";
             subParts.forEach(sub => {
                 const combined = current + sub;
                 const cleanedCombined = cleanSentence(combined);
-                if (cleanedCombined.length > 18 && cleanSentence(current).length > 0) {
+                if (cleanedCombined.length > limit && cleanSentence(current).length > 0) {
                     const toPush = cleanSentence(current);
                     if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(toPush)) {
                         finalParts.push(toPush);
