@@ -170,34 +170,53 @@ async function prepareData() {
 
     function splitSentenceIntoSubtitles(text, isEng) {
         if (!text) return [];
-        const splitRegex = isEng ? /([,;])/ : /([环境，,；;\s])/; // Note: using standard delimiters
         const limit = isEng ? 65 : 18;
         const cleaned = cleanSentence(text);
         if (cleaned.length <= limit) {
             return [cleaned];
         }
         
-        const subParts = cleaned.split(isEng ? /([,;])/ : /([，,；;\s])/);
+        const firstSplitRegex = isEng ? /([,;:\(\)\-]|--)/ : /([，,；;\s])/;
+        const rawParts = cleaned.split(firstSplitRegex).map(p => p.trim()).filter(Boolean);
+        
         const result = [];
         let current = "";
-        subParts.forEach(sub => {
-            const combined = current + sub;
-            const cleanedCombined = cleanSentence(combined);
-            if (cleanedCombined.length > limit && cleanSentence(current).length > 0) {
-                const toPush = cleanSentence(current);
-                if (/[a-zA-Z0-9\u4e00-\u9fa5]/.test(toPush)) {
-                    result.push(toPush);
-                }
-                current = sub;
-            } else {
+        
+        for (const part of rawParts) {
+            // Clean up leading punctuation from part
+            const cleanedPart = cleanSentence(part);
+            if (!cleanedPart) continue;
+            
+            const combined = current ? `${current} ${cleanedPart}` : cleanedPart;
+            if (combined.length <= limit) {
                 current = combined;
+            } else {
+                if (current) {
+                    result.push(cleanSentence(current));
+                    current = cleanedPart;
+                } else {
+                    current = cleanedPart;
+                }
+                
+                if (current.length > limit) {
+                    const words = current.split(/\s+/);
+                    let subLine = "";
+                    for (const w of words) {
+                        if (subLine.length + w.length + 1 > limit) {
+                            if (subLine) result.push(cleanSentence(subLine));
+                            subLine = w;
+                        } else {
+                            subLine = subLine ? `${subLine} ${w}` : w;
+                        }
+                    }
+                    current = subLine;
+                }
             }
-        });
-        const toPush = cleanSentence(current);
-        if (toPush && /[a-zA-Z0-9\u4e00-\u9fa5]/.test(toPush)) {
-            result.push(toPush);
         }
-        return result;
+        if (current) {
+            result.push(cleanSentence(current));
+        }
+        return result.filter(Boolean);
     }
 
     async function generateAudioAndSubtitles(text, audioStartFrame, isEng) {

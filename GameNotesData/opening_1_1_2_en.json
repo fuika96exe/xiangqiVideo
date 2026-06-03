@@ -1,0 +1,213 @@
+{
+    "initial_position": "rheakaehr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RHEAKAEHR w - - 0 1",
+    "title": "1.1.2 Central Cannon, Direct Chariot vs. Chariot – Hu Ronghua's Double Central-Horse System",
+    "annotations": [
+        {
+            "uci": "h3e3",
+            "note": "",
+            "moves": [
+                {
+                    "uci": "h8e8",
+                    "note": "",
+                    "moves": [
+                        {
+                            "uci": "h1g3",
+                            "note": "",
+                            "moves": [
+                                {
+                                    "uci": "h10g8",
+                                    "note": "",
+                                    "moves": [
+                                        {
+                                            "uci": "i1h1",
+                                            "note": "",
+                                            "moves": [
+                                                {
+                                                    "uci": "i10i9",
+                                                    "note": "",
+                                                    "moves": [
+                                                        {
+                                                            "uci": "b1c3",
+                                                            "note": "At first glance, this piece development appears quite ordinary, yet it is actually Hu Ronghua's famous 'Double Central Horses' system, a revolutionary concept that challenged conventional opening theory. Prior to the 1960s, common continuations included Chariot 2+6 (see 'Central Cannon, Direct Chariot vs. Horizontal Chariot'), Horse 8+9, or Advisor 4+5, but none proved as effective as developing the horse to a central position.\n\nIn Xiangqi openings, a central horse is generally considered superior to an edge horse, which in turn is superior to a corner horse. By the same logic, deploying both horses to central positions is often the ideal setup. In contrast, two edge horses are usually regarded as a passive and inefficient formation, especially against a Central Cannon, since they are unable to support the central pawn. As a result, this arrangement is rarely seen in practice.",
+                                                            "moves": [
+                                                                {
+                                                                    "uci": "i9d9",
+                                                                    "note": "Moving the chariot to file 4 is far more purposeful than moving it to file 6. Black's idea is to advance the chariot into the pawn forest with Chariot 4+5, then continue with Chariot 4=3 to capture a pawn and exert pressure on Red's horse. A similar plan can be carried out with Chariot 9=6, followed by Chariot 6+5 and Chariot 6=7. However, Red can respond with Cannon 5-1, allowing the eighth-file cannon to defend the third-file horse. Therefore, the optimal destination of Black's horizontal chariot depends on the placement of Red's cannon, whose defensive influence is exerted on the opposite side of the board.",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "g4g5",
+                                                                            "note": "Although Black clearly intends to play Chariot 4+5 to attack the weak horse, Hu Ronghua calmly ignores the threat. This advance of the third-file pawn serves two purposes: it activates Red's third-file horse (which can later develop with Horse 3+4) while also restricting Black's seventh-file horse (preventing Black from playing Pawn 7+1 followed by Horse 7+6). Because it achieves both objectives at the same time, it is known as a 'dual-purpose pawn advance'.\n\nThis move belongs to the concept of 'activating the horse'.",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "d9d4",
+                                                                                    "note": "Black intends to play Chariot 4=3 to capture the pawn and attack the horse, but Red neutralizes the idea effectively. This is not a good move.",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "g3f5",
+                                                                                            "note": "Instead of defending against Chariot 4=3, Red jumps the horse to attack the chariot, forcing Black to capture the pawn. It is a very clever idea.\n\nAlthough engines generally prefer Cannon 5=4 in this position, the idea of advancing the horse often proves effective in similar situations and is a tactical concept worth studying.",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "d4c4",
+                                                                                                    "note": "Black follows through with the original plan, as inconsistent planning often leads to a disadvantage. Another important opening principle is that a chariot is generally credited with at most three tempos in the opening, regardless of where it moves. Therefore, although Black's chariot has moved four times, it is still considered to have gained only three tempos.",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "c3e2",
+                                                                                                            "note": "The idea is to play Horse 5+3 later, transforming the inactive horse on the left wing into an active piece. This is the key idea behind the variation.\n\nA horse placed directly in front of the king's central advisor is known as a 'Central-King Horse'. Similarly, a cannon or chariot occupying the same square is called a 'Central-King Cannon' or 'Central-King Chariot'. In most situations, especially in the opening, this is considered an awkward formation because the horse blocks the king's escape route and prevents the advisor structure from being completed. Therefore, it is generally best avoided and should not remain there for long.\n\nHowever, one of the greatest attractions of Xiangqi is that almost every principle has its exceptions. Players should understand the ideas behind the principles rather than follow them blindly. In this position, Red can quickly resolve the Central-King Horse with Horse 5+3 on the next move, while Black's major pieces are not yet developed enough to launch an attack. As a result, the Central-King Horse is only a temporary weakness that disappears almost immediately and cannot realistically be exploited.",
+                                                                                                            "moves": [
+                                                                                                                {
+                                                                                                                    "uci": "e8e4",
+                                                                                                                    "note": "A common way to attack a Central-King Horse in this type of position is the formation known as 'Cannon Suppressing Five Pieces'. In this position, Red's central cannon, Central-King Horse, two advisors, and king are all immobilized. Under normal circumstances, this would be a highly favorable local formation for Black. However, since Black's central cannon is not securely established, the attack lacks a solid foundation.",
+                                                                                                                    "moves": [
+                                                                                                                        {
+                                                                                                                            "uci": "f5d6",
+                                                                                                                            "note": "A double attack.",
+                                                                                                                            "moves": [
+                                                                                                                                {
+                                                                                                                                    "uci": "c4d4",
+                                                                                                                                    "note": "The cannon can only move sideways to remain protected.",
+                                                                                                                                    "moves": [
+                                                                                                                                        {
+                                                                                                                                            "uci": "d6e4",
+                                                                                                                                            "note": "In the opening, a horse is generally less valuable than a cannon. A horse is a short-range piece and develops relatively slowly. In particular, a central horse often cannot advance until the pawn in front of it has been moved. By contrast, cannons (and chariots) are long-range pieces that can quickly influence different parts of the board. Therefore, exchanging a horse for a cannon is usually a favorable trade.",
+                                                                                                                                            "moves": [
+                                                                                                                                                {
+                                                                                                                                                    "uci": "d4e4",
+                                                                                                                                                    "note": "Let's compare the development tempos. Red has invested one tempo in the direct chariot, one in the third-file pawn advance, and one in the Central Cannon. The Central-King Horse is not counted separately, since any horse requires one move to reach a central square from its starting position. Black's chariot is counted as three tempos, while the horse contributes one more, for a total of four tempos. On the surface, Black seems to be ahead by one tempo, but Red still has important follow-up ideas available:",
+                                                                                                                                                    "moves": [
+                                                                                                                                                        {
+                                                                                                                                                            "uci": "e2c3",
+                                                                                                                                                            "note": "",
+                                                                                                                                                            "moves": [
+                                                                                                                                                                {
+                                                                                                                                                                    "uci": "e4e5",
+                                                                                                                                                                    "note": "In this phase, Black's chariot gains little additional value whether it remains in the pawn forest or moves to the riverbank, so it does not effectively gain another tempo. Red's horse, however, moves from the Central-King position to an active central square, gaining one tempo. As a result, development is now equal at four tempos each.\n\nHowever, Red still holds the advantage because: (1) Black exchanged a cannon for a horse in the opening; (2) Black's seventh-file horse remains undeveloped due to Red's third-file pawn advance; and (3) Black's central chariot is temporarily restricted and may become a target later. Therefore, the position favors Red.",
+                                                                                                                                                                    "moves": [],
+                                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "drawnArrows": [],
+                                                                                                                                                            "drawnIntersections": []
+                                                                                                                                                        }
+                                                                                                                                                    ],
+                                                                                                                                                    "drawnArrows": [],
+                                                                                                                                                    "drawnIntersections": []
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "drawnArrows": [],
+                                                                                                                                            "drawnIntersections": []
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "drawnArrows": [],
+                                                                                                                                    "drawnIntersections": []
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "drawnArrows": [],
+                                                                                                                            "drawnIntersections": []
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "drawnArrows": [],
+                                                                                                                    "drawnIntersections": []
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                },
+                                                                {
+                                                                    "uci": "i9f9",
+                                                                    "note": "Inferior.",
+                                                                    "moves": [
+                                                                        {
+                                                                            "uci": "c4c5",
+                                                                            "note": "",
+                                                                            "moves": [
+                                                                                {
+                                                                                    "uci": "f9f4",
+                                                                                    "note": "",
+                                                                                    "moves": [
+                                                                                        {
+                                                                                            "uci": "g4g5",
+                                                                                            "note": "",
+                                                                                            "moves": [
+                                                                                                {
+                                                                                                    "uci": "f4g4",
+                                                                                                    "note": "",
+                                                                                                    "moves": [
+                                                                                                        {
+                                                                                                            "uci": "e3e2",
+                                                                                                            "note": "Red's right horse is protected by the left cannon and is not a suitable target for attack.",
+                                                                                                            "moves": [],
+                                                                                                            "drawnArrows": [],
+                                                                                                            "drawnIntersections": []
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "drawnArrows": [],
+                                                                                                    "drawnIntersections": []
+                                                                                                }
+                                                                                            ],
+                                                                                            "drawnArrows": [],
+                                                                                            "drawnIntersections": []
+                                                                                        }
+                                                                                    ],
+                                                                                    "drawnArrows": [],
+                                                                                    "drawnIntersections": []
+                                                                                }
+                                                                            ],
+                                                                            "drawnArrows": [],
+                                                                            "drawnIntersections": []
+                                                                        }
+                                                                    ],
+                                                                    "drawnArrows": [],
+                                                                    "drawnIntersections": []
+                                                                }
+                                                            ],
+                                                            "drawnArrows": [],
+                                                            "drawnIntersections": []
+                                                        }
+                                                    ],
+                                                    "drawnArrows": [],
+                                                    "drawnIntersections": []
+                                                }
+                                            ],
+                                            "drawnArrows": [],
+                                            "drawnIntersections": []
+                                        }
+                                    ],
+                                    "drawnArrows": [],
+                                    "drawnIntersections": []
+                                }
+                            ],
+                            "drawnArrows": [],
+                            "drawnIntersections": []
+                        }
+                    ],
+                    "drawnArrows": [],
+                    "drawnIntersections": []
+                }
+            ],
+            "drawnArrows": [],
+            "drawnIntersections": []
+        }
+    ],
+    "initial position annotation": "Key Concepts:\nIn the opening, a central horse is generally superior to an edge horse, and an edge horse is superior to a corner horse; likewise, two central horses are usually superior to two edge horses.\nIn Central Cannon openings, the cannon's defensive influence extends to the opposite side of the board, so a side chariot should generally target the horse on the cannon side.\nMulti-purpose pawn advance.\nPlans should be carried out consistently; otherwise, one often ends up at a disadvantage.\nIn the opening, a chariot is generally counted as having gained at most three tempos regardless of where it goes.\nA horse placed directly in front of the king is generally considered a poor formation and should not remain there for long."
+}

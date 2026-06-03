@@ -5,24 +5,47 @@ import React from 'react';
 import './index.css';
 import './Composition.css'; 
 
-const formatTitle = (title: string): [string, string] => {
-    if (!title) return ["象棋兵法", ""];
-    let clean = title.replace(/[（(](.*?)[）)]/g, '$1');
-    let match = clean.match(/^(\d+(?:\.\d+)*)\s*(.*)$/);
-    if (match) {
-        let num = match[1];
-        let text = match[2];
-        if (text.includes("对")) {
-            let parts = text.split("对");
-            return [`${num} ${parts[0].trim()}`, `对${parts.slice(1).join("对").trim()}`];
+const formatTitle = (title: string): string[] => {
+    if (!title) return ["象棋兵法"];
+    let clean = title.replace(/[（(](.*?)[）)]/g, '$1').trim();
+    const isEnglish = /[a-zA-Z]/.test(clean);
+    
+    if (isEnglish) {
+        const words = clean.split(/\s+/);
+        const lines: string[] = [];
+        let currentLine = "";
+        
+        for (const w of words) {
+            if (currentLine.length + w.length + 1 > 28) {
+                lines.push(currentLine);
+                currentLine = w;
+            } else {
+                currentLine = currentLine ? `${currentLine} ${w}` : w;
+            }
         }
-        return [`${num} ${text}`, ""];
+        if (currentLine) lines.push(currentLine);
+        
+        if (lines.length > 3) {
+            return [lines[0], lines[1], lines.slice(2).join(" ")];
+        }
+        return lines;
+    } else {
+        let match = clean.match(/^(\d+(?:\.\d+)*)\s*(.*)$/);
+        if (match) {
+            let num = match[1];
+            let text = match[2];
+            if (text.includes("对")) {
+                let parts = text.split("对");
+                return [num, parts[0].trim(), `对${parts.slice(1).join("对").trim()}`];
+            }
+            return [num, text];
+        }
+        if (clean.includes("对")) {
+            let parts = clean.split("对");
+            return [parts[0].trim(), `对${parts.slice(1).join("对").trim()}`];
+        }
+        return [clean];
     }
-    if (clean.includes("对")) {
-        let parts = clean.split("对");
-        return [parts[0].trim(), `对${parts.slice(1).join("对").trim()}`];
-    }
-    return [clean, ""];
 };
 
 const SceneSequence: React.FC<{ scene: any }> = ({ scene }) => {
@@ -40,18 +63,21 @@ const SceneSequence: React.FC<{ scene: any }> = ({ scene }) => {
         elapsed += sub.durationInFrames;
     }
     
-    const [titleLine1, titleLine2] = formatTitle(scene.title || "象棋兵法");
+    const titleLines = formatTitle(scene.title || "象棋兵法");
 
     return (
         <AbsoluteFill>
             {/* Right Top Header: Premium chapter styling */}
             <div className="absolute top-10 right-14 text-right flex flex-col items-end z-20">
                 <h1 
-                    className="text-[20px] font-bold text-[#8b1e1e] leading-[1.3] max-w-[500px]"
+                    className={`font-bold text-[#8b1e1e] leading-[1.3] max-w-[320px] ${
+                        /[a-zA-Z]/.test(scene.title || "") ? 'text-[14px]' : 'text-[20px]'
+                    }`}
                     style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
                 >
-                    <div>{titleLine1}</div>
-                    {titleLine2 ? <div>{titleLine2}</div> : null}
+                    {titleLines.map((line, lIdx) => (
+                        <div key={lIdx}>{line}</div>
+                    ))}
                 </h1>
                 <div className="w-[150px] h-[2px] bg-[#8b1e1e]/40 my-2"></div>
                 <div className="text-[10px] font-semibold text-[#8b1e1e]/60 tracking-[0.25em] font-serif uppercase">
