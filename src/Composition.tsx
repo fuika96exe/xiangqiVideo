@@ -110,7 +110,9 @@ const SceneSequence: React.FC<{ scene: any }> = ({ scene }) => {
                         }}
                     >
                         <p 
-                            className="text-2xl md:text-3xl text-[#fff0a8] font-bold tracking-[0.08em] text-center leading-normal drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                            className={`text-[#fff0a8] font-bold tracking-[0.08em] text-center leading-normal drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${
+                                /[a-zA-Z]/.test(currentSubtitleText) ? 'text-[20px]' : 'text-[24px]'
+                            }`}
                             style={{
                                 wordBreak: 'break-word',
                                 whiteSpace: 'normal'

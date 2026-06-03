@@ -170,54 +170,108 @@ async function prepareData() {
 
     function splitSentenceIntoSubtitles(text, isEng) {
         if (!text) return [];
-        const limit = isEng ? 65 : 18;
         const cleaned = cleanSentence(text);
+        const limit = isEng ? 110 : 32;
         if (cleaned.length <= limit) {
             return [cleaned];
         }
-        
-        const firstSplitRegex = isEng ? /([,;:\(\)\-]|--)/ : /([，,；;\s])/;
-        const rawParts = cleaned.split(firstSplitRegex).map(p => p.trim()).filter(Boolean);
-        
-        const result = [];
-        let current = "";
-        
-        for (const part of rawParts) {
-            // Clean up leading punctuation from part
-            const cleanedPart = cleanSentence(part);
-            if (!cleanedPart) continue;
+
+        const numParts = Math.ceil(cleaned.length / limit);
+        const targetLen = Math.floor(cleaned.length / numParts);
+
+        function findBestSplit(str, targetIdx) {
+            const minIdx = Math.floor(targetIdx * 0.7);
+            const maxIdx = Math.floor(targetIdx * 1.3);
             
-            const combined = current ? `${current} ${cleanedPart}` : cleanedPart;
-            if (combined.length <= limit) {
-                current = combined;
-            } else {
-                if (current) {
-                    result.push(cleanSentence(current));
-                    current = cleanedPart;
-                } else {
-                    current = cleanedPart;
-                }
+            if (isEng) {
+                const puncRegex = /[,;:\(\)\-]/g;
+                let match;
+                let bestPuncIdx = -1;
+                let minPuncDist = Infinity;
                 
-                if (current.length > limit) {
-                    const words = current.split(/\s+/);
-                    let subLine = "";
-                    for (const w of words) {
-                        if (subLine.length + w.length + 1 > limit) {
-                            if (subLine) result.push(cleanSentence(subLine));
-                            subLine = w;
-                        } else {
-                            subLine = subLine ? `${subLine} ${w}` : w;
+                while ((match = puncRegex.exec(str)) !== null) {
+                    const idx = match.index;
+                    if (idx >= minIdx && idx <= maxIdx) {
+                        const dist = Math.abs(idx - targetIdx);
+                        if (dist < minPuncDist) {
+                            minPuncDist = dist;
+                            bestPuncIdx = idx;
                         }
                     }
-                    current = subLine;
                 }
+                
+                if (bestPuncIdx !== -1) {
+                    return bestPuncIdx + 1;
+                }
+                
+                let bestSpaceIdx = -1;
+                let minSpaceDist = Infinity;
+                const spaceRegex = /\s/g;
+                while ((match = spaceRegex.exec(str)) !== null) {
+                    const idx = match.index;
+                    const dist = Math.abs(idx - targetIdx);
+                    if (dist < minSpaceDist) {
+                        minSpaceDist = dist;
+                        bestSpaceIdx = idx;
+                    }
+                }
+                if (bestSpaceIdx !== -1) {
+                    return bestSpaceIdx;
+                }
+                return targetIdx;
+            } else {
+                const puncRegex = /[，,；;\s]/g;
+                let match;
+                let bestPuncIdx = -1;
+                let minPuncDist = Infinity;
+                while ((match = puncRegex.exec(str)) !== null) {
+                    const idx = match.index;
+                    if (idx >= minIdx && idx <= maxIdx) {
+                        const dist = Math.abs(idx - targetIdx);
+                        if (dist < minPuncDist) {
+                            minPuncDist = dist;
+                            bestPuncIdx = idx;
+                        }
+                    }
+                }
+                if (bestPuncIdx !== -1) {
+                    return bestPuncIdx + 1;
+                }
+                return targetIdx;
             }
         }
-        if (current) {
-            result.push(cleanSentence(current));
+
+        const result = [];
+        let remaining = cleaned;
+        
+        for (let i = 0; i < numParts - 1; i++) {
+            const splitIdx = findBestSplit(remaining, targetLen);
+            const part = remaining.substring(0, splitIdx).trim();
+            remaining = remaining.substring(splitIdx).trim();
+            if (part) {
+                result.push(cleanSentence(part));
+            }
         }
-        return result.filter(Boolean);
+        if (remaining) {
+            result.push(cleanSentence(remaining));
+        }
+
+        const finalResult = [];
+        for (let i = 0; i < result.length; i++) {
+            const currentPart = result[i];
+            const isTooShort = isEng ? (currentPart.split(/\s+/).length < 3) : (currentPart.length < 4);
+            
+            if (isTooShort && finalResult.length > 0) {
+                const prevIdx = finalResult.length - 1;
+                finalResult[prevIdx] = cleanSentence(isEng ? `${finalResult[prevIdx]} ${currentPart}` : `${finalResult[prevIdx]}${currentPart}`);
+            } else {
+                finalResult.push(currentPart);
+            }
+        }
+
+        return finalResult.filter(Boolean);
     }
+
 
     async function generateAudioAndSubtitles(text, audioStartFrame, isEng) {
         const majorSentences = text.match(/([^。！？.!?\n]+[。！？.!?\n]?)/g) || [text];
