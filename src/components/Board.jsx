@@ -90,9 +90,9 @@ const Board = ({
                             );
                         })}
                         {/* Calligraphy river names and website watermark */}
-                        <text x="20" y="51" fontSize="6.5" fontFamily="KaiTi, 楷体, 'Microsoft YaHei', serif" fontWeight="bold" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">楚 河</text>
-                        <text x="45" y="51" fontSize="3.5" fontFamily="'Times New Roman', Georgia, serif" fontWeight="bold" fill="#9c5324" opacity="0.35" textAnchor="middle" dominantBaseline="middle">Xiangqi.com</text>
-                        <text x="70" y="51" fontSize="6.5" fontFamily="KaiTi, 楷体, 'Microsoft YaHei', serif" fontWeight="bold" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">漢 界</text>
+                        <text x="20" y="51" fontSize="6.5" fontFamily="'LiSu', '隶书', 'SimLi', KaiTi, serif" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">楚 河</text>
+                        <text x="45" y="51" fontSize="3.5" fontFamily="Georgia, serif" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">Xiangqi.com</text>
+                        <text x="70" y="51" fontSize="6.5" fontFamily="'LiSu', '隶书', 'SimLi', KaiTi, serif" fill="#9c5324" textAnchor="middle" dominantBaseline="middle">漢 界</text>
 
                         {/* Coordinates (Black: left to right 1-9, Red: right to left 1-9) */}
                         {Array.from({ length: 9 }).map((_, i) => (

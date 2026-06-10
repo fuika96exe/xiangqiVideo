@@ -144,6 +144,8 @@ async function prepareData() {
     }
 
     const data = JSON.parse(fs.readFileSync(resolvedPath, 'utf-8'));
+    data.initial_position = data.initial_position || data.initial_fen;
+    data.annotations = data.annotations || data.moves;
     
     // Convert Chinese move notations
     if (data.note) data.note = convertMoveNotation(data.note);
@@ -290,7 +292,7 @@ async function prepareData() {
             for (let attempt = 1; attempt <= 3; attempt++) {
                 try {
                     console.log(`🎙️ [Attempt ${attempt}] Generating major sentence: "${cleanedMajor.substring(0, 30)}${cleanedMajor.length > 30 ? '...' : ''}"`);
-                    const result = tts.toStream(cleanedMajor);
+                    const result = tts.toStream(cleanedMajor, isEng ? { rate: 0.8 } : undefined);
                     await new Promise((res, rej) => {
                         const ws = fs.createWriteStream(filepath);
                         result.audioStream.pipe(ws);
