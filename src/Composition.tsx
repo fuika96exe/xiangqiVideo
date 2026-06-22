@@ -123,6 +123,36 @@ const SceneSequence: React.FC<{ scene: any }> = ({ scene }) => {
                     </div>
                 </div>
             ) : null}
+
+            {/* Right Side Panel: Branch Variations */}
+            {scene.branchInfo && scene.branchInfo.branches && (
+                <div 
+                    className="absolute top-[185px] right-14 w-[240px] border-2 border-[#8b1e1e]/15 rounded-2xl shadow-xl p-3 flex flex-col z-20 overflow-hidden"
+                    style={{
+                        backgroundImage: `url(${staticFile('assets/new-board/new-board-images/wooden-board-bg.svg')})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundColor: 'rgba(252, 248, 242, 0.93)',
+                        backgroundBlendMode: 'overlay',
+                    }}
+                >
+                    {scene.branchInfo.branches.map((branchText: string, idx: number) => {
+                        const isActive = scene.branchInfo.activeIndex === idx;
+                        return (
+                            <div 
+                                key={idx} 
+                                className={`w-full py-3 px-4 text-left transition-all duration-300 font-serif ${
+                                    isActive 
+                                        ? 'bg-[#8b1e1e] text-[#fff0a8] font-bold text-[20px] rounded-xl shadow-md scale-[1.03] z-10' 
+                                        : 'text-[#8b1e1e]/65 font-semibold text-[18px] border-b border-dashed border-[#8b1e1e]/15 last:border-b-0'
+                                }`}
+                            >
+                                {branchText}
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
         </AbsoluteFill>
     );
 };

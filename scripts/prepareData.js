@@ -63,6 +63,52 @@ function applyMove(board, uci) {
     return newBoard;
 }
 
+function getChineseMoveNotation(board, uci) {
+    if (!uci) return "";
+    const match = uci.match(/^([a-i])([0-9]+)([a-i])([0-9]+)$/);
+    if (!match) return "";
+    const c1 = match[1].charCodeAt(0) - 'a'.charCodeAt(0);
+    const r1 = 10 - parseInt(match[2], 10);
+    const c2 = match[3].charCodeAt(0) - 'a'.charCodeAt(0);
+    const r2 = 10 - parseInt(match[4], 10);
+
+    const piece = board[r1][c1];
+    if (!piece) return "";
+
+    const isRed = piece.color === RED;
+    const PIECE_NAMES = {
+        red: { king: '帅', advisor: '仕', elephant: '相', horse: '马', chariot: '车', cannon: '炮', soldier: '兵' },
+        black: { king: '将', advisor: '士', elephant: '象', horse: '马', chariot: '车', cannon: '炮', soldier: '卒' }
+    };
+    const pName = PIECE_NAMES[piece.color][piece.type] || "";
+
+    const redFiles = ["九", "八", "七", "六", "五", "四", "三", "二", "一"];
+    const blackFiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    
+    const srcFile = isRed ? redFiles[c1] : blackFiles[c1];
+    
+    let moveType = "";
+    let destVal = "";
+
+    if (r1 === r2) {
+        moveType = "平";
+        destVal = isRed ? redFiles[c2] : blackFiles[c2];
+    } else {
+        const isForward = isRed ? (r2 < r1) : (r2 > r1);
+        moveType = isForward ? "进" : "退";
+        
+        const isDiagonalPiece = ['horse', 'elephant', 'advisor'].includes(piece.type);
+        if (isDiagonalPiece) {
+            destVal = isRed ? redFiles[c2] : blackFiles[c2];
+        } else {
+            const steps = Math.abs(r1 - r2);
+            destVal = isRed ? redFiles[9 - steps] : blackFiles[steps - 1];
+        }
+    }
+
+    return `${pName}${srcFile}${moveType}${destVal}`;
+}
+
 function cleanSentence(s) {
     return s.replace(/^[，,；;。！？.!?\s\n]+/, '').replace(/[，,；;。！？.!?\s\n]+$/, '').trim();
 }
@@ -349,7 +395,7 @@ async function prepareData() {
         return { subtitles, audios, totalFrames: currentAudioStart - audioStartFrame };
     }
  
-    async function processMoveNode(node, currentBoard, prevBoard, isMainLine, depth) {
+    async function processMoveNode(node, currentBoard, prevBoard, isMainLine, depth, activeBranchInfo = null) {
         const scene = { 
             type: 'move', 
             uci: node.uci, 
@@ -360,7 +406,8 @@ async function prepareData() {
             title: data.title || "象棋兵法", 
             subtitles: [],
             audios: [],
-            audioStartFrame: 15
+            audioStartFrame: 15,
+            branchInfo: activeBranchInfo
         };
  
         if (node.note) {
@@ -374,12 +421,19 @@ async function prepareData() {
         
         timeline.push(scene);
  
-        if (node.moves && node.moves.length > 0) {
-            // Process branches in reverse order
+        if (node.moves && node.moves.length > 1) {
+            const branches = node.moves.map(m => getChineseMoveNotation(currentBoard, m.uci));
             const reversedMoves = [...node.moves].reverse();
             for (const nextMove of reversedMoves) {
-                await processMoveNode(nextMove, applyMove(currentBoard, nextMove.uci), currentBoard, false, depth + 1);
+                const origIndex = node.moves.indexOf(nextMove);
+                const branchInfo = {
+                    branches: branches.map((b, idx) => `${idx + 1}. ${b}`),
+                    activeIndex: origIndex
+                };
+                await processMoveNode(nextMove, applyMove(currentBoard, nextMove.uci), currentBoard, false, depth + 1, branchInfo);
             }
+        } else if (node.moves && node.moves.length === 1) {
+            await processMoveNode(node.moves[0], applyMove(currentBoard, node.moves[0].uci), currentBoard, isMainLine, depth + 1, activeBranchInfo);
         }
     }
  
@@ -408,10 +462,22 @@ async function prepareData() {
     }
  
     if (data.annotations && data.annotations.length > 0) {
-        // Process top-level annotations in reverse order
-        const reversedAnnos = [...data.annotations].reverse();
-        for (const anno of reversedAnnos) {
-            await processMoveNode(anno, applyMove(initialBoard, anno.uci), initialBoard, true, 0);
+        if (data.annotations.length > 1) {
+            const branches = data.annotations.map(m => getChineseMoveNotation(initialBoard, m.uci));
+            const reversedAnnos = [...data.annotations].reverse();
+            for (const anno of reversedAnnos) {
+                const origIndex = data.annotations.indexOf(anno);
+                const branchInfo = {
+                    branches: branches.map((b, idx) => `${idx + 1}. ${b}`),
+                    activeIndex: origIndex
+                };
+                await processMoveNode(anno, applyMove(initialBoard, anno.uci), initialBoard, true, 0, branchInfo);
+            }
+        } else {
+            const reversedAnnos = [...data.annotations].reverse();
+            for (const anno of reversedAnnos) {
+                await processMoveNode(anno, applyMove(initialBoard, anno.uci), initialBoard, true, 0, null);
+            }
         }
     }
 
