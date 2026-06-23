@@ -49,6 +49,46 @@ const formatTitle = (title: string): string[] => {
     }
 };
 
+// Helper to wrap key Chinese chess terms and common vocabulary with non-breaking spans to prevent line-break splitting
+const wrapChessTerms = (text: string): React.ReactNode => {
+    if (!text) return "";
+    
+    // Comprehensive dictionary of Chinese chess terminology and key vocabulary
+    const chessTerms = [
+        "顺手炮", "顺手砲", "列手炮", "列手砲", "中炮", "中砲", "反宫马", "反宫馬", 
+        "单提马", "单提馬", "屏风马", "屏风馬", "大列炮", "大列砲", "小列炮", "小列砲", 
+        "后补列炮", "后补列砲", "象棋兵法", "直车", "直車", "横车", "横車", "中路", 
+        "对称", "對稱", "阵形", "陣形", "阵势", "陣勢", "开局", "開局", "防守", 
+        "进攻", "進攻", "红方", "紅方", "黑方", "楚河", "汉界", "漢界", "小列砲",
+        "大列砲", "对称", "对称的", "反攻马", "反攻馬", "夹炮屏风", "夹砲屏风"
+    ];
+    
+    // Sort by length descending to match longer terms first (e.g. 后补列炮 before 中炮)
+    const sortedTerms = [...chessTerms].sort((a, b) => b.length - a.length);
+    
+    // Escape regex characters just in case
+    const pattern = sortedTerms.map(term => term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')).join('|');
+    const regex = new RegExp(`(${pattern})`, 'g');
+    
+    const parts = text.split(regex);
+    return parts.map((part, idx) => {
+        if (sortedTerms.includes(part)) {
+            return (
+                <span 
+                    key={idx} 
+                    style={{ 
+                        whiteSpace: 'nowrap', 
+                        display: 'inline-block' 
+                    }}
+                >
+                    {part}
+                </span>
+            );
+        }
+        return part;
+    });
+};
+
 interface SceneSequenceProps {
     scene: any;
 }
@@ -282,10 +322,10 @@ const SceneSequenceVertical: React.FC<SceneSequenceProps> = ({ scene }) => {
                     left: 0,
                     width: '100%',
                     height: 'auto',
-                    opacity: 0.6, // Increased opacity to 0.6 as requested
+                    opacity: 0.25, 
                     pointerEvents: 'none',
                     zIndex: 2,
-                    mixBlendMode: 'multiply' // Blend texture together
+                    mixBlendMode: 'multiply'
                 }}
             />
 
@@ -307,16 +347,46 @@ const SceneSequenceVertical: React.FC<SceneSequenceProps> = ({ scene }) => {
                 </div>
             </div>
 
-            {/* Chessboard and Subtitle Unified Layout Layer */}
+            {/* 1. Branch Info Display (1/4): Positioned at a fixed absolute top point */}
+            {scene.branchInfo && scene.branchInfo.branches && (
+                <div 
+                    className="absolute inset-x-0 flex justify-center z-20"
+                    style={{ 
+                        top: '285px', // Moved down by 40px (from 245px to 285px)
+                    }}
+                >
+                    <div 
+                        className="text-center px-10 py-3 rounded-2xl border shadow-md font-bold transition-all duration-300"
+                        style={{
+                            width: '520px', // Fixed tight width
+                            backgroundColor: '#FCF8F2',
+                            borderColor: '#8b1e1e',
+                            borderWidth: '2.5px',
+                            color: '#8b1e1e',
+                            fontSize: '32px',
+                            fontFamily: 'system-ui, -apple-system, sans-serif',
+                            boxShadow: '0 6px 15px rgba(0,0,0,0.12)'
+                        }}
+                    >
+                        变例 ({scene.branchInfo.branches.length - scene.branchInfo.activeIndex}/{scene.branchInfo.branches.length}): {
+                            (() => {
+                                const activeBranch = scene.branchInfo.branches[scene.branchInfo.activeIndex];
+                                return activeBranch ? activeBranch.replace(/^\d+\.\s*/, '') : '';
+                            })()
+                        }
+                    </div>
+                </div>
+            )}
+
+            {/* 2. Chessboard Container: Positioned at a fixed absolute top point, shifted up by 40px (to 43.5% centered) */}
             <div 
-                className="absolute inset-x-0 flex flex-col items-center z-10 w-full"
+                className="absolute inset-x-0 flex items-center justify-center z-10 w-full"
                 style={{
-                    top: '46.5%',
+                    top: '43.5%', // Centered absolute anchor
                     transform: 'translateY(-50%)',
                 }}
             >
-                {/* Board Container */}
-                <div style={{ transform: 'scale(1.6)', transformOrigin: 'center center' }}>
+                <div style={{ transform: 'scale(1.75)', transformOrigin: 'center center' }}>
                     <Board 
                         board={scene.board} 
                         prevBoard={scene.prevBoard}
@@ -325,41 +395,49 @@ const SceneSequenceVertical: React.FC<SceneSequenceProps> = ({ scene }) => {
                         durationInFrames={scene.durationInFrames}
                     />
                 </div>
+            </div>
 
-                {/* Subtitles: Placed directly below the board container in DOM flow */}
-                {currentSubtitleText && currentSubtitleText !== "..." ? (
+            {/* 3. Subtitles Container: Positioned at a fixed absolute bottom position with text-wrap balance to avoid single trailing words */}
+            {currentSubtitleText && currentSubtitleText !== "..." ? (
+                <div 
+                    style={{ 
+                        position: 'absolute',
+                        top: '1350px', // Moved down by 30px (from 1320px to 1350px)
+                        left: 0,
+                        right: 0,
+                        pointerEvents: 'none',
+                        zIndex: 30
+                    }}
+                    className="flex justify-center w-full"
+                >
                     <div 
-                        style={{ 
-                            marginTop: '195px', // Buffer adjusted for scale 1.6 + extra spacing
-                            pointerEvents: 'none',
-                            zIndex: 30
+                        className="bg-black/70 rounded-[28px] border border-gray-800/40 shadow-2xl flex justify-center items-center"
+                        style={{
+                            width: '796px', // Match board width perfectly
+                            display: 'inline-flex',
+                            padding: '20px 40px',
                         }}
-                        className="flex justify-center w-full"
                     >
-                        <div 
-                            className="bg-black/70 rounded-[28px] border border-gray-800/40 shadow-2xl flex justify-center items-center"
+                        <p 
+                            className={`text-[#fff0a8] font-bold tracking-[0.08em] text-center leading-normal drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${
+                                /[a-zA-Z]/.test(currentSubtitleText) ? 'text-[32px]' : 'text-[42px]'
+                            }`}
                             style={{
-                                maxWidth: '80%',
-                                width: 'auto',
-                                display: 'inline-flex',
-                                padding: '20px 40px',
+                                wordBreak: 'break-word',
+                                whiteSpace: 'normal',
+                                textWrap: 'balance', // Prevents single trailing characters on a new line
                             }}
                         >
-                            <p 
-                                className={`text-[#fff0a8] font-bold tracking-[0.08em] text-center leading-normal drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${
-                                    /[a-zA-Z]/.test(currentSubtitleText) ? 'text-[32px]' : 'text-[42px]'
-                                }`}
-                                style={{
-                                    wordBreak: 'break-word',
-                                    whiteSpace: 'normal'
-                                }}
-                            >
-                                {currentSubtitleText}
-                            </p>
-                        </div>
+                            {currentSubtitleText.split('\n').map((line, idx) => (
+                                <React.Fragment key={idx}>
+                                    {idx > 0 && <br />}
+                                    {wrapChessTerms(line)}
+                                </React.Fragment>
+                            ))}
+                        </p>
                     </div>
-                ) : null}
-            </div>
+                </div>
+            ) : null}
         </AbsoluteFill>
     );
 };
