@@ -1,6 +1,6 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import { MyComposition, MyCompositionVertical } from "./Composition";
 import timeline from "./video-timeline.json";
 
 // Calculate the total duration
@@ -16,6 +16,14 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1280}
         height={720}
+      />
+      <Composition
+        id="ShortVideo"
+        component={MyCompositionVertical}
+        durationInFrames={totalDuration > 0 ? totalDuration : 60}
+        fps={30}
+        width={1080}
+        height={1920}
       />
     </>
   );
