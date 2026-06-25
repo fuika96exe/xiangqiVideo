@@ -114,10 +114,10 @@ const SceneSequenceHorizontal: React.FC<SceneSequenceProps> = ({ scene }) => {
     return (
         <AbsoluteFill>
             {/* Horizontal Header */}
-            <div className="absolute top-10 right-14 text-right flex flex-col items-end z-20">
+            <div className="absolute top-[60px] right-[84px] text-right flex flex-col items-end z-20">
                 <h1 
-                    className={`font-bold text-[#8b1e1e] leading-[1.3] max-w-[320px] ${
-                        /[a-zA-Z]/.test(scene.title || "") ? 'text-[14px]' : 'text-[20px]'
+                    className={`font-bold text-[#8b1e1e] leading-[1.3] max-w-[480px] ${
+                        /[a-zA-Z]/.test(scene.title || "") ? 'text-[21px]' : 'text-[30px]'
                     }`}
                     style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
                 >
@@ -125,38 +125,40 @@ const SceneSequenceHorizontal: React.FC<SceneSequenceProps> = ({ scene }) => {
                         <div key={lIdx}>{line}</div>
                     ))}
                 </h1>
-                <div className="w-[150px] h-[2px] bg-[#8b1e1e]/40 my-2"></div>
-                <div className="text-[10px] font-semibold text-[#8b1e1e]/60 tracking-[0.25em] font-serif uppercase">
+                <div className="w-[225px] h-[3px] bg-[#8b1e1e]/40 my-3"></div>
+                <div className="text-[15px] font-semibold text-[#8b1e1e]/60 tracking-[0.25em] font-serif uppercase">
                     xiangqi.com official
                 </div>
             </div>
 
             {/* Horizontal Board */}
-            <div className="absolute inset-x-0 top-[25px] flex justify-center">
-                <Board 
-                    board={scene.board} 
-                    prevBoard={scene.prevBoard}
-                    uci={scene.uci}
-                    frame={frame}
-                    durationInFrames={scene.durationInFrames}
-                />
+            <div className="absolute inset-x-0 top-[38px] flex justify-center">
+                <div style={{ transform: 'scale(1.5)', transformOrigin: 'top center' }}>
+                    <Board 
+                        board={scene.board} 
+                        prevBoard={scene.prevBoard}
+                        uci={scene.uci}
+                        frame={frame}
+                        durationInFrames={scene.durationInFrames}
+                    />
+                </div>
             </div>
 
             {/* Horizontal Subtitles */}
             {currentSubtitleText && currentSubtitleText !== "..." ? (
-                <div className="absolute bottom-[30px] left-0 right-0 flex justify-center z-30 pointer-events-none">
+                <div className="absolute bottom-[45px] left-0 right-0 flex justify-center z-30 pointer-events-none">
                     <div 
                         className="bg-black/70 rounded-[28px] border border-gray-800/40 shadow-2xl flex justify-center items-center"
                         style={{
                             maxWidth: '85%',
                             width: 'auto',
                             display: 'inline-flex',
-                            padding: '10px 20px',
+                            padding: '15px 30px',
                         }}
                     >
                         <p 
                             className={`text-[#fff0a8] font-bold tracking-[0.08em] text-center leading-normal drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${
-                                /[a-zA-Z]/.test(currentSubtitleText) ? 'text-[20px]' : 'text-[24px]'
+                                /[a-zA-Z]/.test(currentSubtitleText) ? 'text-[30px]' : 'text-[36px]'
                             }`}
                             style={{
                                 wordBreak: 'break-word',
@@ -172,15 +174,15 @@ const SceneSequenceHorizontal: React.FC<SceneSequenceProps> = ({ scene }) => {
             {/* Right Side Panel: Branch Variations */}
             {scene.branchInfo && scene.branchInfo.branches && (
                 <div 
-                    className="absolute top-[185px] right-14 w-[240px] rounded-2xl shadow-xl flex flex-col z-20 overflow-hidden"
+                    className="absolute top-[278px] right-[84px] w-[360px] rounded-2xl shadow-xl flex flex-col z-20 overflow-hidden"
                     style={{
                         backgroundColor: '#FCF8F2',
-                        border: '2px solid #8b1e1e',
-                        padding: '8px',
+                        border: '3px solid #8b1e1e',
+                        padding: '12px',
                         boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.15)'
                     }}
                 >
-                    <div className="w-full h-full flex flex-col p-1.5 border border-dashed border-[#8b1e1e]/30 rounded-xl">
+                    <div className="w-full h-full flex flex-col p-[9px] border border-dashed border-[#8b1e1e]/30 rounded-xl">
                         {(() => {
                             const originalBranches = [...scene.branchInfo.branches];
                             const reversedBranches = [...originalBranches].reverse();
@@ -199,8 +201,8 @@ const SceneSequenceHorizontal: React.FC<SceneSequenceProps> = ({ scene }) => {
                                         key={idx} 
                                         className={`w-full py-3 px-4 text-left transition-all duration-300 font-serif ${
                                             isActive 
-                                                ? 'bg-[#8b1e1e] text-[#fff0a8] font-bold text-[20px] rounded-xl shadow-md scale-[1.03] z-10' 
-                                                : 'text-[#8b1e1e]/65 font-semibold text-[18px] border-b border-dashed border-[#8b1e1e]/15 last:border-b-0'
+                                                ? 'bg-[#8b1e1e] text-[#fff0a8] font-bold text-[30px] rounded-xl shadow-md scale-[1.03] z-10' 
+                                                : 'text-[#8b1e1e]/65 font-semibold text-[27px] border-b border-dashed border-[#8b1e1e]/15 last:border-b-0'
                                         }`}
                                     >
                                         {displayIndex}. {cleanMoveText}
@@ -243,9 +245,9 @@ export const MyComposition: React.FC = () => {
                 }}
             />
 
-            <div className="absolute top-10 left-14 flex items-center gap-3 z-20">
+            <div className="absolute top-[60px] left-[84px] flex items-center gap-[18px] z-20">
                 <div 
-                    className="w-10 h-10 rounded-full flex justify-center items-center"
+                    className="w-[60px] h-[60px] rounded-full flex justify-center items-center"
                     style={{
                         backgroundImage: `url(${staticFile('assets/new-board/new-board-images/red-wooden-piece-bg.svg')})`,
                         backgroundSize: 'cover',
@@ -257,7 +259,7 @@ export const MyComposition: React.FC = () => {
                         style={{ width: '70%', height: '70%', pointerEvents: 'none' }}
                     />
                 </div>
-                <span className="text-2xl font-extrabold text-[#8b1e1e] font-serif tracking-tight drop-shadow-sm">Xiangqi.com</span>
+                <span className="text-[42px] font-extrabold text-[#8b1e1e] font-serif tracking-tight drop-shadow-sm">Xiangqi.com</span>
             </div>
 
             <Series>
