@@ -14,8 +14,8 @@ export const RemotionRoot: React.FC = () => {
         component={MyComposition}
         durationInFrames={totalDuration > 0 ? totalDuration : 60}
         fps={30}
-        width={1280}
-        height={720}
+        width={1920}
+        height={1080}
       />
       <Composition
         id="ShortVideo"

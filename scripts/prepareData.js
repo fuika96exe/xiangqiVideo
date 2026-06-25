@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 const { MsEdgeTTS, OUTPUT_FORMAT } = require("msedge-tts");
 const tts = new MsEdgeTTS();
@@ -15,7 +15,7 @@ args.forEach(arg => {
 });
 
 if (!dataFilePath) {
-    console.error("❌ Error: Please specify a file using --file=\"path/to/json\"");
+    console.error("âŒ Error: Please specify a file using --file=\"path/to/json\"");
     process.exit(1);
 }
 
@@ -77,12 +77,12 @@ function getChineseMoveNotation(board, uci) {
 
     const isRed = piece.color === RED;
     const PIECE_NAMES = {
-        red: { king: '帅', advisor: '仕', elephant: '相', horse: '马', chariot: '车', cannon: '炮', soldier: '兵' },
-        black: { king: '将', advisor: '士', elephant: '象', horse: '马', chariot: '车', cannon: '炮', soldier: '卒' }
+        red: { king: 'å¸…', advisor: 'ä»•', elephant: 'ç›¸', horse: 'é©¬', chariot: 'è½¦', cannon: 'ç‚®', soldier: 'å…µ' },
+        black: { king: 'å°†', advisor: 'å£«', elephant: 'è±¡', horse: 'é©¬', chariot: 'è½¦', cannon: 'ç‚®', soldier: 'å’' }
     };
     const pName = PIECE_NAMES[piece.color][piece.type] || "";
 
-    const redFiles = ["九", "八", "七", "六", "五", "四", "三", "二", "一"];
+    const redFiles = ["ä¹", "å…«", "ä¸ƒ", "å…­", "äº”", "å››", "ä¸‰", "äºŒ", "ä¸€"];
     const blackFiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
     
     const srcFile = isRed ? redFiles[c1] : blackFiles[c1];
@@ -91,11 +91,11 @@ function getChineseMoveNotation(board, uci) {
     let destVal = "";
 
     if (r1 === r2) {
-        moveType = "平";
+        moveType = "å¹³";
         destVal = isRed ? redFiles[c2] : blackFiles[c2];
     } else {
         const isForward = isRed ? (r2 < r1) : (r2 > r1);
-        moveType = isForward ? "进" : "退";
+        moveType = isForward ? "è¿›" : "é€€";
         
         const isDiagonalPiece = ['horse', 'elephant', 'advisor'].includes(piece.type);
         if (isDiagonalPiece) {
@@ -110,16 +110,16 @@ function getChineseMoveNotation(board, uci) {
 }
 
 function cleanSentence(s) {
-    return s.replace(/^[，,；;。！？.!?\s\n]+/, '').replace(/[，,；;。！？.!?\s\n]+$/, '').trim();
+    return s.replace(/^[ï¼Œ,ï¼›;ã€‚ï¼ï¼Ÿ.!?\s\n]+/, '').replace(/[ï¼Œ,ï¼›;ã€‚ï¼ï¼Ÿ.!?\s\n]+$/, '').trim();
 }
 
 function splitCommentary(text) {
     if (!text) return [];
     const isEnglishText = /[a-zA-Z]/.test(text) && !/[\u4e00-\u9fa5]/.test(text);
     const limit = isEnglishText ? 65 : 18;
-    const splitRegex = isEnglishText ? /([,;])/ : /([，,；;\s])/;
+    const splitRegex = isEnglishText ? /([,;])/ : /([ï¼Œ,ï¼›;\s])/;
 
-    const parts = text.match(/([^。！？.!?\n]+[。！？.!?\n]?)/g) || [text];
+    const parts = text.match(/([^ã€‚ï¼ï¼Ÿ.!?\n]+[ã€‚ï¼ï¼Ÿ.!?\n]?)/g) || [text];
     const finalParts = [];
     
     parts.forEach(part => {
@@ -156,13 +156,13 @@ function splitCommentary(text) {
 function convertMoveNotation(text) {
     if (!text) return "";
     const numMap = {
-        '1': '一', '2': '二', '3': '三', '4': '四', '5': '五',
-        '6': '六', '7': '七', '8': '八', '9': '九'
+        '1': 'ä¸€', '2': 'äºŒ', '3': 'ä¸‰', '4': 'å››', '5': 'äº”',
+        '6': 'å…­', '7': 'ä¸ƒ', '8': 'å…«', '9': 'ä¹'
     };
     const actionMap = {
-        '+': '进', '-': '退', '=': '平'
+        '+': 'è¿›', '-': 'é€€', '=': 'å¹³'
     };
-    return text.replace(/([车马炮卒兵仕士相象帅将])(\d)([\+\-=])(\d)/g, (match, piece, n1, action, n2) => {
+    return text.replace(/([è½¦é©¬ç‚®å’å…µä»•å£«ç›¸è±¡å¸…å°†])(\d)([\+\-=])(\d)/g, (match, piece, n1, action, n2) => {
         const cn1 = numMap[n1] || n1;
         const cnAct = actionMap[action] || action;
         const cn2 = numMap[n2] || n2;
@@ -172,22 +172,25 @@ function convertMoveNotation(text) {
 
 
 async function prepareData() {
-    console.log("🚀 Starting data preparation...");
+    console.log("ðŸš€ Starting data preparation...");
     
-    console.log("📖 Reading game file:", dataFilePath);
+    console.log("ðŸ“– Reading game file:", dataFilePath);
     
     let resolvedPath = dataFilePath;
     if (!fs.existsSync(resolvedPath)) {
         const altPath = path.join(__dirname, '..', 'GameNotesData', dataFilePath);
         if (fs.existsSync(altPath)) {
             resolvedPath = altPath;
-            console.log("📍 Found file in GameNotesData:", resolvedPath);
+            console.log("ðŸ“ Found file in GameNotesData:", resolvedPath);
         } else {
-            console.error(`❌ Error: File not found: ${dataFilePath}`);
+            console.error(`âŒ Error: File not found: ${dataFilePath}`);
             console.error(`Checked locations:\n - ${path.resolve(dataFilePath)}\n - ${altPath}`);
             process.exit(1);
         }
     }
+
+    const outputBaseName = path.basename(resolvedPath, path.extname(resolvedPath));
+    const outputVideoPath = path.join(__dirname, '..', 'out', `${outputBaseName}.mp4`);
 
     const data = JSON.parse(fs.readFileSync(resolvedPath, 'utf-8'));
     data.initial_position = data.initial_position || data.initial_fen;
@@ -210,7 +213,7 @@ async function prepareData() {
     const firstNote = data.annotations && data.annotations[0] && data.annotations[0].note || "";
     const isEnglish = /[a-zA-Z]/.test(data.title || firstNote) && !/[\u4e00-\u9fa5]/.test(data.title || firstNote);
     const voice = isEnglish ? "en-US-GuyNeural" : "zh-CN-YunxiNeural";
-    console.log(`🎙️ Using voice: ${voice} (${isEnglish ? 'English' : 'Chinese'})`);
+    console.log(`ðŸŽ™ï¸ Using voice: ${voice} (${isEnglish ? 'English' : 'Chinese'})`);
     
     await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
     const timeline = [];
@@ -268,7 +271,7 @@ async function prepareData() {
                 }
                 return targetIdx;
             } else {
-                const puncRegex = /[，,；;\s]/g;
+                const puncRegex = /[ï¼Œ,ï¼›;\s]/g;
                 let match;
                 let bestPuncIdx = -1;
                 let minPuncDist = Infinity;
@@ -322,7 +325,7 @@ async function prepareData() {
 
 
     async function generateAudioAndSubtitles(text, audioStartFrame, isEng) {
-        const majorSentences = text.match(/([^。！？.!?\n]+[。！？.!?\n]?)/g) || [text];
+        const majorSentences = text.match(/([^ã€‚ï¼ï¼Ÿ.!?\n]+[ã€‚ï¼ï¼Ÿ.!?\n]?)/g) || [text];
         const subtitles = [];
         const audios = [];
         let currentAudioStart = audioStartFrame;
@@ -337,7 +340,7 @@ async function prepareData() {
             let success = false;
             for (let attempt = 1; attempt <= 3; attempt++) {
                 try {
-                    console.log(`🎙️ [Attempt ${attempt}] Generating major sentence: "${cleanedMajor.substring(0, 30)}${cleanedMajor.length > 30 ? '...' : ''}"`);
+                    console.log(`ðŸŽ™ï¸ [Attempt ${attempt}] Generating major sentence: "${cleanedMajor.substring(0, 30)}${cleanedMajor.length > 30 ? '...' : ''}"`);
                     const result = tts.toStream(cleanedMajor, isEng ? { rate: 0.8 } : undefined);
                     await new Promise((res, rej) => {
                         const ws = fs.createWriteStream(filepath);
@@ -352,12 +355,12 @@ async function prepareData() {
                         break;
                     }
                 } catch (err) {
-                    console.warn(`⚠️ Attempt ${attempt} failed for ${filename}. Retrying...`);
+                    console.warn(`âš ï¸ Attempt ${attempt} failed for ${filename}. Retrying...`);
                 }
             }
             
             if (!success) {
-                console.error(`❌ Error: Audio generation failed for: ${cleanedMajor}`);
+                console.error(`âŒ Error: Audio generation failed for: ${cleanedMajor}`);
                 process.exit(1);
             }
             
@@ -403,7 +406,7 @@ async function prepareData() {
             prevBoard, 
             isMainLine, 
             depth, 
-            title: data.title || "象棋兵法", 
+            title: data.title || "è±¡æ£‹å…µæ³•", 
             subtitles: [],
             audios: [],
             audioStartFrame: 15,
@@ -442,14 +445,14 @@ async function prepareData() {
     // Initial Position Annotation
     const initialNote = data['initial position annotation'] || data.initial_position_annotation;
     if (initialNote) {
-        console.log("📖 Processing initial position annotation...");
+        console.log("ðŸ“– Processing initial position annotation...");
         const scene = {
             type: 'initial',
             board: initialBoard,
             prevBoard: initialBoard,
             isMainLine: true,
             depth: 0,
-            title: data.title || "象棋兵法",
+            title: data.title || "è±¡æ£‹å…µæ³•",
             subtitles: [],
             audios: [],
             audioStartFrame: 10
@@ -482,15 +485,20 @@ async function prepareData() {
     }
 
     fs.writeFileSync(OUTPUT_JSON, JSON.stringify(timeline, null, 2));
-    console.log("✨ Timeline generated. Starting video render...");
+    console.log("âœ¨ Timeline generated. Starting video render...");
     
     // Auto-trigger Remotion Render
     try {
-        execSync('npm run render', { stdio: 'inherit' });
-        console.log("✅ Video successfully rendered to out/video.mp4");
+        execSync(
+            `npx remotion render MyComp "${outputVideoPath}" --browser-executable="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"`,
+            { stdio: 'inherit' }
+        );
+        console.log(`Video successfully rendered to ${outputVideoPath}`);
     } catch (e) {
-        console.error("❌ Render failed, please check Remotion errors above.");
+        console.error("Render failed, please check Remotion errors above.");
     }
 }
 
 prepareData().catch(console.error);
+
+
